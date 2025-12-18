@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import LandingPage from "./pages/LandingPage";
+import BlogDetail from "./pages/BlogDetail";
 
 const Layout = () => {
   return (
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <LandingPage /> },
       { path: "/blog", element: <Blog /> },
+      { path: "/blog/:slug", element: <BlogDetail/> },
       { path: "/services", element: <Services /> },
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
