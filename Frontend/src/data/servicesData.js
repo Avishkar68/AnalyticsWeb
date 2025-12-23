@@ -7,7 +7,7 @@ export const services = [
     subServices: [
       {
         id: "sports",
-        title: "Sports ",
+        title: "Sports",
         description: "Analytics in sports is a relatively new concept compared to Banking or Retail. We use granular data as fuel to drive athletic and organizational performance.",
         points: ["Detailed analysis of team dynamics", "Individual player performance modeling", "What-if scenario analysis", "Score and outcome projections", "Injury prevention modeling"],
         benefits: ["Enhanced performance", "Strategic drafting", "Revenue growth"]
