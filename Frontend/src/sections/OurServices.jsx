@@ -29,9 +29,9 @@ const OurServices = () => {
             <div
               key={service.id}
               onClick={() => navigate(`/services/${service.id}`)}
-              className="group bg-white border border-slate-100 rounded-[2rem] md:rounded-[2.5rem] p-8 md:p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden"
+              className="group bg-white border border-slate-100 rounded-4xl md:rounded-[2.5rem] p-8 md:p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden"
             >
-              <div className="w-14 h-14 md:w-16 md:h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 md:mb-10 text-special-section-bg group-hover:bg-special-section-bg group-hover:text-maintext transition-colors duration-500">
+              <div className="w-14 h-14 md:w-16 md:h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 md:mb-10 text-maintext  group-hover:bg-special-section-bg group-hover:text-maintext transition-colors duration-500">
                 {service.id === 'consulting' ? <Globe size={28} /> : 
                  service.id === 'training' ? <Users size={28} /> : 
                  <BarChart3 size={28} />}

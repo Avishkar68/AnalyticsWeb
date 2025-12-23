@@ -148,7 +148,9 @@ const Services = () => {
                 </p>
 
                 <div className="mt-8 pt-6 border-t border-slate-50 text-point-text font-bold text-[10px] uppercase tracking-[0.2em]">
-                  View Analysis
+                <div className="flex items-center gap-2 text-maintext font-bold text-[10px] uppercase tracking-widest group-hover:text-point-text transition-colors w-fit px-5 py-3 border rounded-full  border-[#DDE2E9] bg-[#F8F9FB]">
+                View Analysis
+              </div>
                 </div>
               </div>
             ))}
@@ -186,7 +188,7 @@ const Services = () => {
               onClick={() => navigate(`/services/${service.id}`)}
               className="group bg-white border border-slate-100 rounded-[2.5rem] p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer relative overflow-hidden"
             >
-              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 text-special-section-bg group-hover:bg-special-section-bg group-hover:text-maintext transition-colors duration-500">
+              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-10 text-maintext group-hover:bg-special-section-bg group-hover:text-maintext transition-colors duration-500">
                 {service.id === "consulting" ? (
                   <Globe size={32} />
                 ) : service.id === "training" ? (
@@ -208,7 +210,7 @@ const Services = () => {
                 {service.shortDescription}
               </p>
 
-              <div className="flex items-center gap-2 text-maintext font-bold text-[10px] uppercase tracking-widest group-hover:text-point-text transition-colors">
+              <div className="flex items-center gap-2 text-maintext font-bold text-[10px] uppercase tracking-widest group-hover:text-point-text transition-colors w-fit px-5 py-3 border rounded-full  border-[#DDE2E9] bg-[#F8F9FB]">
                 Explore Category <ChevronRight size={16} />
               </div>
             </div>
