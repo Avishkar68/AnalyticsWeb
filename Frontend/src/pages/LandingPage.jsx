@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from '../sections/Hero'
 import OurServices from '../sections/OurServices'
 import Testimonials from '../sections/Testimonials'
@@ -9,7 +9,9 @@ import Careers from '../sections/Careers'
 import CTA from '../sections/CTA'
 
 const LandingPage = () => {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='font-inter'>
       <Hero/>

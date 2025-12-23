@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import blogsData from "../data/blogsData";
 
 const Blog = () => {
   // SAME button style as Blogs page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const btnStyle =
     "inline-block bg-[#F8F9FB] border border-[#DDE2E9] text-[#2D3142] px-6 py-2 rounded-full text-sm font-medium transition hover:text-white hover:bg-button-hover-bg";
 

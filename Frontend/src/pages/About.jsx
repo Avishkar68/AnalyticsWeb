@@ -1,105 +1,121 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <section className="bg-[#F9FAFB] py-20 px-6">
+    <section className="bg-[#F9FAFB] py-12 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-point-text uppercase mb-2">
+        <div className="text-center mb-12 md:mb-16">
+          <p className="text-[10px] md:text-sm font-semibold text-point-text uppercase tracking-widest mb-2">
             About Us
           </p>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-maintext mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-maintext mb-4 leading-tight">
             Turning insight into impact
           </h1>
 
-          <p className="text-subtext max-w-2xl mx-auto">
+          <p className="text-subtext text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             We help businesses make confident decisions through strategy,
             data, and clarity.
           </p>
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 
-          {/* Left Text */}
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-              alt="Team strategy meeting"
-              className="w-full h-[200px] object-cover rounded-2xl mb-4"
-            />
+          {/* Left Text / Image */}
+          <div className="order-1">
+            <div className="relative mb-6 md:mb-8">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                alt="Team strategy meeting"
+                className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-sm"
+              />
+            </div>
 
-            <h2 className="text-2xl font-semibold text-maintext mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-maintext mb-4">
               Who we are
             </h2>
 
-            <p className="text-maintext leading-relaxed mb-4">
-              We are a consulting and data-driven solutions team focused on
-              solving real business problems. Our approach blends strategic
-              thinking with analytics to help organizations grow sustainably.
-            </p>
+            <div className="space-y-4">
+              <p className="text-maintext text-base md:text-lg leading-relaxed">
+                We are a consulting and data-driven solutions team focused on
+                solving real business problems. Our approach blends strategic
+                thinking with analytics to help organizations grow sustainably.
+              </p>
 
-            <p className="text-maintext leading-relaxed">
-              From early-stage startups to established enterprises, we work
-              closely with teams to uncover insights, streamline processes,
-              and build systems that last.
-            </p>
+              <p className="text-maintext text-base md:text-lg leading-relaxed">
+                From early-stage startups to established enterprises, we work
+                closely with teams to uncover insights, streamline processes,
+                and build systems that last.
+              </p>
+            </div>
           </div>
 
           {/* Right Cards */}
-          <div className="grid grid-cols-1 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-slate-100">
-              <h3 className="font-semibold text-maintext mb-2">
+          <div className="grid grid-cols-1 gap-4 md:gap-6 order-2">
+            <div className="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
+              <h3 className="text-lg font-bold text-maintext mb-3">
                 Our Mission
               </h3>
-              <p className="text-sm text-subtext">
+              <p className="text-sm md:text-base text-subtext leading-relaxed">
                 To empower businesses with clarity, confidence, and
                 data-backed decisions.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-100">
-              <h3 className="font-semibold text-maintext mb-2">
+            <div className="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
+              <h3 className="text-lg font-bold text-maintext mb-3">
                 Our Vision
               </h3>
-              <p className="text-sm text-subtext">
+              <p className="text-sm md:text-base text-subtext leading-relaxed">
                 To become a trusted partner for organizations seeking
                 meaningful and measurable growth.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border border-slate-100">
-              <h3 className="font-semibold text-maintext mb-2">
+            <div className="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
+              <h3 className="text-lg font-bold text-maintext mb-3">
                 Our Values
               </h3>
-              <ul className="text-sm text-subtext space-y-1">
-                <li>• Transparency & trust</li>
-                <li>• Data-driven thinking</li>
-                <li>• Long-term impact</li>
+              <ul className="text-sm md:text-base text-subtext space-y-2">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-point-text" /> 
+                  Transparency & trust
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-point-text" /> 
+                  Data-driven thinking
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-point-text" /> 
+                  Long-term impact
+                </li>
               </ul>
             </div>
           </div>
 
         </div>
 
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <h3 className="text-3xl font-bold text-maintext">5+</h3>
-            <p className="text-sm text-subtext">Industries Served</p>
+        {/* Stats Section */}
+        <div className="mt-16 md:mt-24 py-10 bg-white md:bg-transparent rounded-[2rem] md:rounded-none shadow-sm md:shadow-none border border-slate-100 md:border-none grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="space-y-1">
+            <h3 className="text-4xl font-bold text-maintext">5+</h3>
+            <p className="text-xs md:text-sm font-bold text-point-text uppercase tracking-widest">Industries Served</p>
           </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-maintext">50+</h3>
-            <p className="text-sm text-subtext">Projects Delivered</p>
+          <div className="space-y-1 border-y md:border-y-0 md:border-x border-slate-100 py-6 md:py-0">
+            <h3 className="text-4xl font-bold text-maintext">50+</h3>
+            <p className="text-xs md:text-sm font-bold text-point-text uppercase tracking-widest">Projects Delivered</p>
           </div>
 
-          <div>
-            <h3 className="text-3xl font-bold text-maintext">100%</h3>
-            <p className="text-sm text-subtext">Client Commitment</p>
+          <div className="space-y-1">
+            <h3 className="text-4xl font-bold text-maintext">100%</h3>
+            <p className="text-xs md:text-sm font-bold text-point-text uppercase tracking-widest">Client Commitment</p>
           </div>
         </div>
 
