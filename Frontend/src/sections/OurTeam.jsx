@@ -8,7 +8,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50 px-6">
+    <section className="py-16 bg-white px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold text-point-text uppercase mb-2">Our People</p>

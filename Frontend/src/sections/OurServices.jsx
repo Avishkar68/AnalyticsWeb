@@ -8,7 +8,7 @@ const OurServices = () => {
   const featuredServices = services.slice(0, 3);
 
   return (
-    <section className="bg-white pt-16 pb-20 px-6">
+    <section className="bg-[#F9FAFB] pt-16 pb-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-10 flex flex-col items-center justify-center text-center">
           <div className="max-w-2xl">
