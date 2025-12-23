@@ -28,8 +28,8 @@ const router = createBrowserRouter([
       { path: "/", element: <LandingPage /> },
       { path: "/blog", element: <Blog /> },
       { path: "/blog/:slug", element: <BlogDetail/> },
-      { path: "/services/:id", element: <Services/> },
-      // { path: "/services", element: <Services /> },
+      { path: "/services", element: <Services /> }, // Main List
+      { path: "/services/:id", element: <Services /> }, // Detail View
       { path: "/about", element: <About /> },
       { path: "/contact", element: <Contact /> },
     ],

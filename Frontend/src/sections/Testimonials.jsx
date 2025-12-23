@@ -2,16 +2,16 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-50 py-20 px-6">
+    <section className="bg-special-section-bg py-16 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-emerald-500 uppercase mb-2">
+          <p className="text-sm font-semibold text-point-text uppercase mb-2">
             Testimonials
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            See what our customers have to say about us
+          <h2 className="text-3xl md:text-5xl font-bold text-maintext">
+            See what our customers<br/> have to say about us
           </h2>
         </div>
 
@@ -20,7 +20,7 @@ const Testimonials = () => {
 
           {/* Testimonial 1 */}
           <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+            <p className="text-subtext text-sm mb-6 leading-relaxed">
               “Working with several world-class designers has been a real
               time-saver for me. It allowed me to focus on what I do best,
               which is creating beautiful and user-friendly websites that
@@ -35,16 +35,16 @@ const Testimonials = () => {
                   className="w-10 h-10 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-sm font-semibold text-gray-900">
+                  <p className="text-sm font-semibold text-maintext">
                     Jane Cooper
                   </p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-subtext opacity-80">
                     CEO, Innotech
                   </p>
                 </div>
               </div>
 
-              <div className="text-emerald-500 text-sm">
+              <div className="text-point-text text-sm">
                 ★ ★ ★ ★ ★
               </div>
             </div>
@@ -52,7 +52,7 @@ const Testimonials = () => {
 
           {/* Testimonial 2 */}
           <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition">
-            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+            <p className="text-subtext text-sm mb-6 leading-relaxed">
               “Sinek’s team provides invaluable strategic guidance. Their
               insights have been critical for our growth, helping us
               navigate a competitive marketplace with confidence and
@@ -68,16 +68,16 @@ const Testimonials = () => {
                   className="w-10 h-10 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-sm font-semibold text-gray-900">
+                  <p className="text-sm font-semibold text-maintext">
                     John Smith
                   </p>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-subtext opacity-80">
                     Creative Director
                   </p>
                 </div>
               </div>
 
-              <div className="text-emerald-500 text-sm">
+              <div className="text-point-text text-sm">
                 ★ ★ ★ ★ ★
               </div>
             </div>

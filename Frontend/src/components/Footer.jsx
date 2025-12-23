@@ -14,10 +14,10 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2">
-              <div className="bg-blue-600 p-1.5 rounded-lg">
+              <div className="bg-point-text p-1.5 rounded-lg">
                 <BarChart2 size={20} className="text-white transform rotate-90" />
               </div>
-              <span className="text-xl font-bold text-slate-800 tracking-tight">
+              <span className="text-xl font-bold text-maintext tracking-tight">
                 Sincio
               </span>
             </Link>
@@ -32,10 +32,10 @@ const Footer = () => {
               Quick Link
             </h4>
             <ul className="space-y-4">
-              <li><Link to="/about" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Contact Us</Link></li>
-              <li><Link to="#" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Careers</Link></li>
-              <li><Link to="/blog" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Blog</Link></li>
+              <li><Link to="/about" className="text-subtext hover:text-point-text text-sm transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact Us</Link></li>
+              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-subtext hover:text-point-text text-sm transition-colors">Blog</Link></li>
             </ul>
           </div>
 
@@ -45,10 +45,10 @@ const Footer = () => {
               Services
             </h4>
             <ul className="space-y-4">
-              <li><Link to="/services" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Business Consulting</Link></li>
-              <li><Link to="/services" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Data Analytics</Link></li>
-              <li><Link to="/services" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Finance Strategy</Link></li>
-              <li><Link to="/services" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Risk Management</Link></li>
+              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Business Consulting</Link></li>
+              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Data Analytics</Link></li>
+              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Finance Strategy</Link></li>
+              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Risk Management</Link></li>
             </ul>
           </div>
 
@@ -58,10 +58,10 @@ const Footer = () => {
               Information
             </h4>
             <ul className="space-y-4">
-              <li><Link to="#" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Privacy Policy</Link></li>
-              <li><Link to="#" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Terms & Conditions</Link></li>
-              <li><Link to="#" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">FAQs</Link></li>
-              <li><Link to="/contact" className="text-slate-600 hover:text-blue-600 text-sm transition-colors">Contact</Link></li>
+              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Privacy Policy</Link></li>
+              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">FAQs</Link></li>
+              <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>

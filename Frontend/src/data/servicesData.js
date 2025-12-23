@@ -1,73 +1,61 @@
 export const services = [
   {
-    id: "business-consulting",
-    title: "Business Consulting",
-    tagline: "Grow smiles to boost business",
-    shortDescription:
-      "We help businesses improve performance with data-backed strategies.",
-    points: [
-      "Strategic Business Guidance",
-      "Market Analysis",
-      "Smart Consulting Services"
-    ],
-    detailedDescription: `
-Our Business Consulting service focuses on identifying growth opportunities,
-optimizing operations, and aligning strategy with business goals.
-
-We work closely with stakeholders to understand challenges, analyze market
-conditions, and deliver actionable insights that drive sustainable growth.
-    `,
-    benefits: [
-      "Clear business roadmap",
-      "Improved decision making",
-      "Higher operational efficiency"
+    id: "consulting",
+    title: "Consulting",
+    shortDescription: "The last decade has seen a rapid growth in data driven decision making in all sectors of Industry.",
+    detailedDescription: "The last decade has seen a rapid growth in data driven decision making in all sectors of Industry. Corporations across several industry verticals have clearly recognised the value of statistical methods in driving business solutions and customer satisfaction. Use of analytics is a key differentiator in providing value to every business process.",
+    subServices: [
+      {
+        id: "sports",
+        title: "Sports ",
+        description: "Analytics in sports is a relatively new concept compared to Banking or Retail. We use granular data as fuel to drive athletic and organizational performance.",
+        points: ["Detailed analysis of team dynamics", "Individual player performance modeling", "What-if scenario analysis", "Score and outcome projections", "Injury prevention modeling"],
+        benefits: ["Enhanced performance", "Strategic drafting", "Revenue growth"]
+      },
+      {
+        id: "banking",
+        title: "Banking",
+        description: "SevenIslands helps bankers focus on three crucial pillars: Customer Acquisition, Retention, and Risk Management.",
+        points: ["Credit Scoring Models", "Real-time Fraud Detection", "Customer Lifetime Value (CLV)", "Liquidity Risk Analytics", "Regulatory Compliance Automation"],
+        benefits: ["Lower default rates", "Personalized marketing", "Regulatory safety"]
+      },
+      {
+        id: "fmcg",
+        title: "FMCG",
+        description: "We process vast amounts of primary and secondary data to provide total supply chain visibility and consumer insights.",
+        points: ["Supply Chain Optimization", "Demand & Sales Forecasting", "Trade Promotion Analysis", "Market Basket Analysis", "Price Elasticity Modeling"],
+        benefits: ["Reduced stockouts", "Improved margins", "Consumer-centric growth"]
+      }
     ]
   },
   {
-    id: "data-development",
-    title: "Data Development",
-    tagline: "Turn data into decisions",
-    shortDescription:
-      "Build scalable data systems and analytics that fuel smarter decisions.",
-    points: [
-      "BI Implementation",
-      "Predictive Modeling",
-      "Data Warehousing"
-    ],
-    detailedDescription: `
-Our Data Development service enables organizations to harness the power of data.
-From data pipelines to dashboards, we ensure your data is reliable, accessible,
-and actionable.
-
-We design systems that scale with your business and support advanced analytics.
-    `,
-    benefits: [
-      "Reliable data pipelines",
-      "Real-time insights",
-      "Data-driven culture"
+    id: "training",
+    title: "Training",
+    shortDescription: "SevenIslands is committed to bridging the global gap between the demand and supply of skilled data professionals.",
+    detailedDescription: "Our training modules ensure your workforce isn't just learning tools, but developing a deep statistical intuition for business growth.",
+    subServices: [
+      {
+        id: "data-science",
+        title: "Advanced Data Science",
+        description: "A deep dive into the modern data stack, moving from spreadsheets to scalable machine learning workflows.",
+        points: ["Python for Enterprise", "Machine Learning Workflows", "Big Data Handling", "Model Deployment (MLOps)"],
+        benefits: ["Future-proof team", "Internal innovation"]
+      }
     ]
   },
   {
-    id: "finance-strategy",
-    title: "Finance Strategy",
-    tagline: "Plan today, win tomorrow",
-    shortDescription:
-      "Financial strategies aligned with your long-term vision.",
-    points: [
-      "Financial Planning",
-      "Investment Advisory",
-      "Risk Assessment"
-    ],
-    detailedDescription: `
-Our Finance Strategy service goes beyond accounting.
-We help you plan capital allocation, manage risks, and maximize returns.
-
-Whether you're scaling or stabilizing, we provide financial clarity and direction.
-    `,
-    benefits: [
-      "Stronger financial control",
-      "Reduced risks",
-      "Long-term value creation"
+    id: "products",
+    title: "Products",
+    shortDescription: "We build custom analytics products that transform complex algorithms into intuitive business interfaces.",
+    detailedDescription: "SevenIslands develops proprietary 'Analytics-as-a-Product' solutions that integrate directly into your IT ecosystem.",
+    subServices: [
+      {
+        id: "island-insight",
+        title: "IslandInsight™",
+        description: "A unified business intelligence portal that aggregates data from siloed sources into a single source of truth.",
+        points: ["Real-time ingestion", "Customizable KPI widgets", "Automated executive reporting"],
+        benefits: ["Silo breakdown", "Instant visibility"]
+      }
     ]
   }
 ];

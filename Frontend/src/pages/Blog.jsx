@@ -3,19 +3,25 @@ import { Link } from "react-router-dom";
 import blogsData from "../data/blogsData";
 
 const Blog = () => {
+  // SAME button style as Blogs page
+  const btnStyle =
+    "inline-block bg-[#F8F9FB] border border-[#DDE2E9] text-[#2D3142] px-6 py-2 rounded-full text-sm font-medium transition hover:text-white hover:bg-button-hover-bg";
+
   return (
     <section className="bg-gray-50 min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Page Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-emerald-500 uppercase mb-2">
+          <p className="text-sm font-semibold text-point-text uppercase mb-2">
             Blog
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+
+          <h1 className="text-4xl md:text-5xl font-bold text-maintext mb-4">
             Our latest insights & articles
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+
+          <p className="text-subtext max-w-2xl mx-auto">
             Explore expert opinions, strategies, and industry trends to help
             your business grow smarter and faster.
           </p>
@@ -35,19 +41,16 @@ const Blog = () => {
               />
 
               <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h3 className="text-lg font-semibold text-maintext mb-2">
                   {blog.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-subtext mb-6">
                   {blog.description}
                 </p>
 
-                <Link
-                  to={`/blog/${blog.slug}`}
-                  className="inline-block text-emerald-500 font-medium text-sm hover:underline"
-                >
-                  Read Article →
+                <Link to={`/blog/${blog.slug}`} className={btnStyle}>
+                  Read Article
                 </Link>
               </div>
             </div>

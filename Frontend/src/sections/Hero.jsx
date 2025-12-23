@@ -2,28 +2,26 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gray-50 flex items-center px-6 md:px-16">
+    <section className="min-h-fit py-26 bg-gray-50 flex items-center px-6 md:px-16">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
+
         {/* LEFT CONTENT */}
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-14 tracking-tight">
-            Helping businesses grow 
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-maintext leading-14 tracking-tight">
+            Helping businesses<br/> grow
             through smart strategy.
           </h1>
 
-          <p className="text-gray-600 max-w-xl">
+          <p className=" max-w-xl text-subtext">
             Driven by purpose and powered by creativity, we help brands connect
             with their audience through meaningful storytelling and design that
             inspires action.
           </p>
 
           <div className="flex items-center gap-4">
-            <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-full font-medium transition">
+            <button className=" hover:bg-button-hover-bg  text-button-text hover:text-button-hover-text border cursor-pointer border-button-border px-6 py-3 rounded-full font-medium transition">
               Get a Quote
             </button>
-
-           
           </div>
         </div>
 
