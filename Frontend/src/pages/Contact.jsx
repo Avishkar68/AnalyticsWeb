@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="bg-slate-50 min-h-screen py-20 px-6">
+    <section className="bg-[#F9FAFB] min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

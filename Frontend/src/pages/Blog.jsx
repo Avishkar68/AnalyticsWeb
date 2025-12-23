@@ -8,7 +8,7 @@ const Blog = () => {
     "inline-block bg-[#F8F9FB] border border-[#DDE2E9] text-[#2D3142] px-6 py-2 rounded-full text-sm font-medium transition hover:text-white hover:bg-button-hover-bg";
 
   return (
-    <section className="bg-gray-50 min-h-screen py-20 px-6">
+    <section className="bg-[#F9FAFB] min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Page Header */}

@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section className="bg-slate-50 py-20 px-6">
+    <section className="bg-[#F9FAFB] py-20 px-6">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
