@@ -18,7 +18,7 @@ const Footer = () => {
                 <BarChart2 size={20} className="text-white transform rotate-90" />
               </div>
               <span className="text-xl font-bold text-maintext tracking-tight">
-                Sincio
+              Seveniles
               </span>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
@@ -69,7 +69,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-100 flex flex-col md:row items-center justify-between gap-6">
           <p className="text-slate-400 text-sm">
-            © {currentYear} Sincio Analytics. All rights reserved.
+            © {currentYear} Seveniles Analytics. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4">
