@@ -43,15 +43,13 @@ const About = () => {
 
             <div className="space-y-4">
               <p className="text-maintext text-base md:text-lg leading-relaxed">
-                We are a consulting and data-driven solutions team focused on
-                solving real business problems. Our approach blends strategic
-                thinking with analytics to help organizations grow sustainably.
+               Sevenisles Consultancy is a forward-thinking business analytics and strategic consulting firm dedicated to helping organizations turn data into actionable insight and lasting competitive advantage. In an era where data is abundant but clarity is scarce, we partner with businesses to unlock the true potential of information, enabling smarter decisions, optimized performance, and measurable growth. Our solutions 
+combine analytical rigor with real-world business context, so you no longer just have data, you have direction.
+
               </p>
 
               <p className="text-maintext text-base md:text-lg leading-relaxed">
-                From early-stage startups to established enterprises, we work
-                closely with teams to uncover insights, streamline processes,
-                and build systems that last.
+                At Sevenisles, we specialize in designing and delivering tailored analytics strategies, advanced data modeling, and transformational consulting services that drive real business outcomes.
               </p>
             </div>
           </div>
@@ -63,8 +61,7 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-sm md:text-base text-subtext leading-relaxed">
-                To empower businesses with clarity, confidence, and
-                data-backed decisions.
+               To empower organizations of all sizes with precision analytics, strategic clarity, and practical insights helping them drive growth, optimize operations, and innovate with confidence.
               </p>
             </div>
 

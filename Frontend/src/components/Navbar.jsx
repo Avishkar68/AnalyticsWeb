@@ -44,7 +44,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link to="/services" className="text-sm font-medium text-subtext hover:text-point-text transition-colors">
-          Services
+          Offerings
         </Link>
         <Link to="/about" className="text-sm font-medium text-subtext hover:text-point-text transition-colors">
           About Us

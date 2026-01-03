@@ -45,16 +45,16 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:gap-2">
                   <span className="font-bold text-point-text uppercase text-[10px] tracking-wider">Phone</span>
-                  <span className="font-medium">+91 98765 43210</span>
+                  <span className="font-medium">Ph. +1(347)879-4529</span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:gap-2">
                   <span className="font-bold text-point-text uppercase text-[10px] tracking-wider">Address</span>
-                  <span className="font-medium">Mumbai, India</span>
+                  <span className="font-medium">1 2nd Street, Unit 2411, Jersey City, NJ 07302, USA</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-100 shadow-sm">
+            {/* <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-100 shadow-sm">
               <h3 className="text-xl font-bold text-maintext mb-4">
                 Working hours
               </h3>
@@ -63,7 +63,7 @@ const Contact = () => {
                 Monday – Friday: 9:00 AM – 6:00 PM <br />
                 Saturday & Sunday: <span className="text-point-text font-medium">Closed</span>
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
