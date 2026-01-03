@@ -1019,6 +1019,69 @@ const Services = () => {
       </section>
     );
   }
+  /* -------------------------------------------------------------------------- */
+/* PRODUCTS – DIRECT CONTENT VIEW                                              */
+/* -------------------------------------------------------------------------- */
+if (mainService?.id === "products") {
+  const product = mainService.subServices?.[0]; // IslandInsight™
+
+  return (
+    <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+
+        {/* Header */}
+        <div className="text-center mb-14">
+          <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
+            Product
+          </span>
+
+          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
+            {product.title}
+            <span className="text-point-text">.</span>
+          </h1>
+
+          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">
+            {product.description}
+          </p>
+        </div>
+
+        {/* Points */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <h3 className="text-xs font-bold uppercase tracking-widest mb-6">
+            What it does
+          </h3>
+
+          <ul className="space-y-4">
+            {product.points.map((point, idx) => (
+              <li key={idx} className="flex gap-3">
+                <Check size={16} className="text-point-text mt-1" />
+                <span className="text-maintext font-medium">{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Benefits */}
+        <div className="max-w-4xl mx-auto bg-[#F8F9FB] border border-slate-200 rounded-[2.5rem] p-8 md:p-12">
+          <h3 className="text-xs font-bold uppercase tracking-widest mb-6">
+            Business Impact
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {product.benefits.map((benefit, idx) => (
+              <div key={idx} className="flex gap-3">
+                <ArrowUpRight size={16} className="text-point-text mt-1" />
+                <span className="text-maintext font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 
   /* -------------------------------------------------------------------------- */
   /* 4. SERVICE CATEGORY VIEW                                                    */

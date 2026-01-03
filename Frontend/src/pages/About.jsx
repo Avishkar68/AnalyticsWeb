@@ -15,7 +15,7 @@ const About = () => {
           </p>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-maintext mb-4 leading-tight">
-            Turning insight into impact
+              Data Analytics & Strategic Consulting Company 
           </h1>
 
           <p className="text-subtext text-base md:text-lg max-w-2xl mx-auto leading-relaxed">

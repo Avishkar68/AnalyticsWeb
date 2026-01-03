@@ -21,7 +21,7 @@ const Blog = () => {
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bold text-maintext mb-4">
-            Our latest insights & articles
+            Data Analytics & Business Strategy Insights
           </h1>
 
           <p className="text-subtext max-w-2xl mx-auto">

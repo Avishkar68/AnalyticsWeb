@@ -15,7 +15,7 @@ const Contact = () => {
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-4 leading-tight">
-            Let’s start a conversation
+              Contact Sevenisles for Data Analytics & Consulting
           </h1>
 
           <p className="text-subtext text-base md:text-lg max-w-2xl mx-auto">
