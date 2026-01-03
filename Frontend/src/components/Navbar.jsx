@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { BarChart2, Menu, X } from 'lucide-react';
-
+import sevenisles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -29,13 +29,13 @@ const Navbar = () => {
     <nav className="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100 sticky top-0 z-[100]">
       
       {/* Logo Section - EXACTLY AS ORIGINAL */}
-      <Link to="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity z-[120]">
-        <div className="bg-point-text p-1.5 rounded-lg shadow-sm">
-          <BarChart2 size={20} className="text-white transform rotate-90" />
+      <Link to="/" className="flex items-center gap-1 hover:opacity-90 transition-opacity z-[120]">
+        <div className="w-50 ">
+          <img src={sevenisles_consultancy_logo} />
         </div>
-        <span className="text-xl font-bold text-slate-800 tracking-tight">
+        {/* <span className="text-2xl font-bold text-slate-800 tracking-tight">
           Seveniles
-        </span>
+        </span> */}
       </Link>
 
       {/* Navigation Links - EXACTLY AS ORIGINAL */}
