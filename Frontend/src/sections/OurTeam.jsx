@@ -1,11 +1,11 @@
 import React from "react";
-
+import profile from "../assets/about-neha-data-analytics.jpeg"
 const OurTeam = () => {
   const team = [
     {
       name: "Neha Patwa",
       role: "Founder",
-      img: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+      img: profile,
     },
   ];
 
