@@ -8,11 +8,11 @@ const Hero = () => {
         {/* LEFT CONTENT */}
         <div className="space-y-6 text-left lg:text-left order-2 lg:order-1">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-maintext leading-tight lg:leading-14 tracking-tight">
-             Helping businesses grow<br className="hidden md:block" />
+             Helping businesses grow
   through data analytics & strategy.
           </h1>
 
-          <p className="mx-auto lg:mx-0 max-w-xl text-subtext text-base md:text-lg">
+          <p className="mx-0 lg:mx-0 max-w-xl text-subtext text-base md:text-lg">
             Driven by purpose and powered by creativity, we help brands connect
             with their audience through meaningful storytelling and design that
             inspires action.
