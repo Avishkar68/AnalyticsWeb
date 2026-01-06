@@ -30,7 +30,6 @@ const Contact = () => {
   return (
     <section className="bg-[#F9FAFB] min-h-screen py-12 md:py-20 px-6">
       <div className="max-w-7xl mx-auto">
-
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <p className="text-[10px] md:text-sm font-semibold text-point-text uppercase tracking-widest mb-2">
@@ -38,18 +37,17 @@ const Contact = () => {
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-4 leading-tight">
-              Contact Sevenisles for Data Analytics & Consulting
+            Contact Sevenisles for Data Analytics & Consulting
           </h1>
 
           <p className="text-subtext text-base md:text-lg max-w-2xl mx-auto">
-            Have a question, project idea, or just want to say hello?
-            We’d love to hear from you.
+            Have a question, project idea, or just want to say hello? We’d love
+            to hear from you.
           </p>
         </div>
 
         {/* Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-12">
-
           {/* Contact Info */}
           <div className="space-y-6 order-2 lg:order-1">
             <div className="bg-white rounded-[2rem] p-8 md:p-10 border border-slate-100 shadow-sm">
@@ -61,18 +59,49 @@ const Contact = () => {
                 Reach out to us through any of the following channels.
               </p>
 
-              <div className="space-y-4 text-sm md:text-base text-maintext">
-                <div className="flex flex-col sm:flex-row sm:gap-2">
-                  <span className="font-bold text-point-text uppercase text-[10px] tracking-wider">Email</span>
-                  <span className="font-medium">hello@seveniles.com</span>
+              <div className="space-y-5 text-sm md:text-base text-maintext">
+                {/* Email */}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
+                  <span className="font-bold text-point-text uppercase text-[10px] tracking-wider sm:w-20">
+                    Email
+                  </span>
+                  <div className="flex flex-col gap-1 font-medium">
+                    <a
+                      href="mailto:neha.patwa@sevenislesconsultancy.com"
+                      className="hover:text-point-text transition-colors"
+                    >
+                      neha.patwa@sevenislesconsultancy.com
+                    </a>
+                    <a
+                      href="mailto:info@sevenislesconsultancy.com"
+                      className="hover:text-point-text transition-colors"
+                    >
+                      info@sevenislesconsultancy.com
+                    </a>
+                  </div>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:gap-2">
-                  <span className="font-bold text-point-text uppercase text-[10px] tracking-wider">Phone</span>
-                  <span className="font-medium">Ph. +1(347)879-4529</span>
+
+                {/* Phone */}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
+                  <span className="font-bold text-point-text uppercase text-[10px] tracking-wider sm:w-20">
+                    Phone
+                  </span>
+                  <a
+                    href="tel:+13478794529"
+                    className="font-medium hover:text-point-text transition-colors"
+                  >
+                    +1 (347) 879-4529
+                  </a>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:gap-2">
-                  <span className="font-bold text-point-text uppercase text-[10px] tracking-wider">Address</span>
-                  <span className="font-medium">1 2nd Street, Unit 2411, Jersey City, NJ 07302, USA</span>
+
+                {/* Address */}
+                <div className="flex flex-col sm:flex-row sm:items-start sm:gap-4">
+                  <span className="font-bold text-point-text uppercase text-[10px] tracking-wider sm:w-20">
+                    Address
+                  </span>
+                  <span className="font-medium leading-relaxed">
+                    1 2nd Street, Unit 2411, Jersey City, NJ 07302, USA
+                  </span>
                 </div>
               </div>
             </div>
@@ -123,7 +152,6 @@ const Contact = () => {
               </button>
             </form>
           </div>
-
         </div>
       </div>
     </section>
