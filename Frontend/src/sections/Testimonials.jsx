@@ -7,9 +7,7 @@ const Testimonials = () => {
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-point-text uppercase mb-2">
-            Testimonials
-          </p>
+         
           <h2 className="text-3xl md:text-5xl font-bold text-maintext">
             See what our customers<br/> have to say about us
           </h2>

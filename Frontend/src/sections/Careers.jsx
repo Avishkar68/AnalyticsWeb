@@ -8,7 +8,6 @@ const Careers = () => {
         <div className="space-y-6 text-center lg:text-left">
           <div className="inline-block">
             <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-2">Careers</h2>
-            <div className="h-1 w-12 bg-point-text rounded-full mx-auto lg:mx-0"></div>
           </div>
 
           <div className="space-y-4 text-subtext leading-relaxed text-base md:text-lg">

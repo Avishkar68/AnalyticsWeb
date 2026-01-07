@@ -32,9 +32,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-[10px] md:text-sm font-semibold text-point-text uppercase tracking-widest mb-2">
-            Contact Us
-          </p>
+        
 
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-4 leading-tight">
             Contact Sevenisles for Data Analytics & Consulting
@@ -67,12 +65,6 @@ const Contact = () => {
                   </span>
                   <div className="flex flex-col gap-1 font-medium">
                     <a
-                      href="mailto:neha.patwa@sevenislesconsultancy.com"
-                      className="hover:text-point-text transition-colors"
-                    >
-                      neha.patwa@sevenislesconsultancy.com
-                    </a>
-                    <a
                       href="mailto:info@sevenislesconsultancy.com"
                       className="hover:text-point-text transition-colors"
                     >
@@ -100,7 +92,7 @@ const Contact = () => {
                     Address
                   </span>
                   <span className="font-medium leading-relaxed">
-                    1 2nd Street, Unit 2411, Jersey City, NJ 07302, USA
+                    1 2nd Street, Jersey City, NJ 07302, USA
                   </span>
                 </div>
               </div>

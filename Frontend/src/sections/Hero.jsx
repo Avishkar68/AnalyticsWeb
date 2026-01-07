@@ -1,15 +1,15 @@
 import React from "react";
-import hero from "../assets/hero.jpg"
+import { Link, useLocation } from 'react-router-dom';
+
+import hero from "../assets/hero.jpg";
 const Hero = () => {
   return (
     <section className="min-h-fit py-12 md:py-26 bg-gray-50 flex items-center px-6 md:px-16">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
         {/* LEFT CONTENT */}
         <div className="space-y-6 text-left lg:text-left order-2 lg:order-1">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-maintext leading-tight lg:leading-14 tracking-tight">
-             Helping businesses grow
-  through data analytics & strategy.
+            Helping businesses grow through data analytics & strategy.
           </h1>
 
           <p className="mx-0 lg:mx-0 max-w-xl text-subtext text-base md:text-lg">
@@ -19,9 +19,11 @@ const Hero = () => {
           </p>
 
           <div className="flex items-center justify-start lg:justify-start gap-4">
-            <button className="hover:bg-button-hover-bg text-button-text hover:text-button-hover-text border cursor-pointer border-button-border px-8 py-3 rounded-full font-medium transition w-fit sm:w-auto">
-              Get a Quote
-            </button>
+            <Link to="/contact">
+              <button className="hover:bg-button-hover-bg text-button-text hover:text-button-hover-text border cursor-pointer border-button-border px-8 py-3 rounded-full font-medium transition w-fit sm:w-auto">
+                Get a Quote
+              </button>
+            </Link>
           </div>
         </div>
 

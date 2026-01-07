@@ -10,9 +10,7 @@ const Blogs = () => {
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <p className="text-sm font-semibold text-point-text uppercase mb-2">
-            Our Blog
-          </p>
+     
           <h2 className="text-3xl md:text-5xl font-bold text-maintext">
             Insights, ideas & industry trends
           </h2>

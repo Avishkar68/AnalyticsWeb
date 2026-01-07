@@ -833,13 +833,10 @@ const Services = () => {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-14">
-          <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
-            Training & Upskilling
-          </span>
+        
 
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-maintext">
             {mainService.title}
-            <span className="text-point-text">.</span>
           </h1>
 
           <p className="text-subtext max-w-[900px] mx-auto text-base md:text-lg leading-relaxed">
@@ -850,12 +847,11 @@ const Services = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {mainService.modules.map((module, idx) => (
             <div key={idx}>
-              <h3 className="text-lg font-bold text-maintext mb-3">
+              <h3 className="text-xl font-bold text-point-text mb-3">
                 {module.title}
               </h3>
-              <div className="h-[2px] w-8 bg-point-text mb-4"></div>
 
-              <ul className="space-y-2 text-subtext text-sm">
+              <ul className="space-y-2 text-subtext text-lg">
                 {module.topics.map((topic, i) => (
                   <li key={i} className="flex gap-2">
                     <span className="text-point-text">•</span>
@@ -881,7 +877,6 @@ const Services = () => {
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
-            Pharmaceutical<span className="text-point-text">.</span>
           </h1>
 
           <p className="text-subtext text-base md:text-lg leading-relaxed mb-6 whitespace-pre-line">
@@ -1092,13 +1087,12 @@ if (mainService?.id === "products") {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-14">
-          <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
+          {/* <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
             Category Overview
-          </span>
+          </span> */}
 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             {mainService.title}
-            <span className="text-point-text">.</span>
           </h2>
 
           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">

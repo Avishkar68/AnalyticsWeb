@@ -63,7 +63,7 @@ export const services = [
   /* -------------------------------------------------------------------------- */
   {
     id: "consulting",
-    title: "Consulting & Strategic Advisory",
+    title: "Consulting & Advisory",
     shortDescription:
       "From shaping business strategy to guiding implementation, our consulting services support leaders in navigating change and driving long-term growth.",
     detailedDescription:
@@ -153,7 +153,7 @@ We work with organizations across the pharmaceutical value chain to turn complex
   shortDescription:
     "Practical and industry-focused training programs in analytics and data skills for professionals and teams.",
   detailedDescription:
-    "At Sevenisles Consulting, we provide practical and industry-focused training programs in analytics and data skills for professionals and teams. Our courses are designed to build capability from basic data understanding to advanced analytics—helping you make informed decisions, solve real business problems, and drive measurable impact. Training can be delivered online, on-site, or in a blended format with hands-on learning based on real business scenarios.",
+    "At Sevenisles Consulting, we provide practical and industry-focused training programs in analytics and data skills for professionals and teams. Our courses are designed to build capability from basic data understanding to advanced analytics helping you make informed decisions, solve real business problems, and drive measurable impact. Training can be delivered online, on-site, or in a blended format with hands-on learning based on real business scenarios.",
 
   modules: [
     {
