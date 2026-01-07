@@ -11,7 +11,7 @@
 // } from "lucide-react";
 
 // const Services = () => {
-  
+
 //   const { id } = useParams();
 //   const [searchParams] = useSearchParams();
 //   const subId = searchParams.get("sub");
@@ -836,7 +836,7 @@
 //     return (
 //       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
 //         <div className="max-w-7xl mx-auto text-center mb-14">
-        
+
 
 //           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-maintext">
 //             {mainService.title}
@@ -918,7 +918,7 @@
 //     return (
 //       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
 //         <div className="max-w-7xl mx-auto text-center mb-2">
-    
+
 
 //           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
 //             {offering.title}
@@ -928,7 +928,7 @@
 //             {offering.description}
 //           </p>
 
-          
+
 //         </div>
 
 //         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
@@ -952,7 +952,7 @@
 //  </div>
 //           {offering.additionalDesc && (
 //             <div className=" max-w-[1900px] ">
-          
+
 //               <p className="text-maintext text-xl text-left leading-relaxed font-medium px-14  py-5 rounded-xl ">
 //                 {offering.additionalDesc}
 //               </p>
@@ -962,7 +962,7 @@
 //           {/* <div className="h-48 md:h-64 bg-maintext rounded-[2.5rem] flex items-center justify-center">
 //             <Globe size={100} className="text-point-text opacity-20" />
 //           </div> */}
-       
+
 //       </section>
 //     );
 //   }
@@ -974,7 +974,7 @@
 //     return (
 //       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
 //         <div className="max-w-7xl mx-auto text-center mb-14">
-          
+
 
 //           <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
 //             {industry.title}
@@ -1025,7 +1025,7 @@
 
 //         {/* Header */}
 //         <div className="text-center mb-0">
-        
+
 
 //           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
 //             {product.title}
@@ -1264,17 +1264,25 @@ const Services = () => {
               {industry.description}
             </p>
           </div>
-          <h3 className="text-xl font-bold text-left uppercase tracking-widest mb-6">Services we offer</h3>
-          <ul className="space-y-4 mb-8">
+          <h3 className="text-xl font-bold uppercase tracking-widest mb-6 
+               text-left md:text-left">
+            Services we offer
+          </h3>
+
+          <ul className="space-y-3 md:space-y-4 mb-8">
             {industry.services.map((item, idx) => (
-              <li key={idx} className="flex gap-3">
-                <div className="flex items-center gap-4">
-                  <GoDotFill className="text-point-text" />
-                  <span className="text-lg font-medium">{item}</span>
+              <li key={idx} className="flex justify-start md:justify-start">
+                <div className="flex items-start gap-3 max-w-[700px]">
+                  <GoDotFill className="text-point-text mt-1 shrink-0" />
+                  <span className="text-base md:text-lg font-medium text-left">
+                    {item}
+                  </span>
                 </div>
               </li>
             ))}
           </ul>
+
+
           <p className="text-maintext text-lg text-left leading-relaxed">{industry.approach}</p>
         </div>
       </section>
@@ -1307,8 +1315,8 @@ const Services = () => {
           </div>
         </div>
         {offering.additionalDesc && (
-          <div className="max-w-7xl mx-auto px-14 py-5">
-            <p className="text-maintext text-xl text-left leading-relaxed font-medium rounded-xl">{offering.additionalDesc}</p>
+          <div className="md:max-w-7xl mx-auto md:px-14 py-5">
+            <p className="text-maintext text-base md:text-xl text-left leading-relaxed font-medium rounded-xl">{offering.additionalDesc}</p>
           </div>
         )}
       </section>
@@ -1333,8 +1341,8 @@ const Services = () => {
               className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
               <div className="w-full h-56 overflow-hidden">
-                <img 
-                  src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"} 
+                <img
+                  src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"}
                   alt={offer.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -1363,7 +1371,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-0">
             <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{product.title}</h1>
-            <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">{product.description}</p>
+            <p className="text-subtext md:max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">{product.description}</p>
           </div>
           <div className="rounded-[2.5rem] p-8 md:p-14 md:pl-40">
             <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">Services We Offer</h3>
@@ -1410,8 +1418,8 @@ const Services = () => {
               className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
               <div className="w-full h-52 overflow-hidden">
-                <img 
-                  src={item.imageUrl || "https://images.unsplash.com/photo-1551288049-bbda38a5f9a2?q=80&w=800"} 
+                <img
+                  src={item.imageUrl || "https://images.unsplash.com/photo-1551288049-bbda38a5f9a2?q=80&w=800"}
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
@@ -1450,16 +1458,16 @@ const Services = () => {
           >
             {/* Top Image Section */}
             <div className="w-full h-64 overflow-hidden">
-              <img 
-                src={service.imageUrl || "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800"} 
+              <img
+                src={service.imageUrl || "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800"}
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
-            
+
             <div className="p-8 md:p-12">
               <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8">
-                {service.id === "consulting" ? <Globe size={28}/> : service.id === "training" ? <Users size={28}/> : <BarChart3 size={28}/>}
+                {service.id === "consulting" ? <Globe size={28} /> : service.id === "training" ? <Users size={28} /> : <BarChart3 size={28} />}
               </div>
               <span className="text-6xl font-black opacity-5 absolute bottom-10 right-10">0{index + 1}</span>
               <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
