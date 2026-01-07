@@ -809,7 +809,9 @@ import {
   BarChart3,
   Users,
   ArrowUpRight,
+  Dot,
 } from "lucide-react";
+import { GoDotFill } from "react-icons/go";
 
 const Services = () => {
   const { id } = useParams();
@@ -854,7 +856,6 @@ const Services = () => {
               <ul className="space-y-2 text-subtext text-lg">
                 {module.topics.map((topic, i) => (
                   <li key={i} className="flex gap-2">
-                    <span className="text-point-text">•</span>
                     <span>{topic}</span>
                   </li>
                 ))}
@@ -879,7 +880,7 @@ const Services = () => {
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6"> Pharmaceutical
           </h1>
 
-          <p className="text-subtext text-base md:text-lg leading-relaxed mb-6 whitespace-pre-line">
+          <p className="text-base w-[1300px] font-semibold   md:text-lg leading-relaxed mb-6 whitespace-pre-line">
             {industry.description}
           </p>
 
@@ -890,13 +891,16 @@ const Services = () => {
           <ul className="space-y-4 mb-8">
             {industry.services.map((item, idx) => (
               <li key={idx} className="flex gap-3">
-                <Check size={16} className="text-point-text mt-1" />
-                <span className="text-maintext font-medium">{item}</span>
+                <div className="flex items-center gap-4" > 
+
+                <GoDotFill className="text-point-text" /> 
+                <span className="text-lg font-medium">{item}</span>
+                </div>
               </li>
             ))}
           </ul>
 
-          <p className="text-maintext text-base leading-relaxed">
+          <p className="text-maintext text-lg text-left leading-relaxed">
             {industry.approach}
           </p>
         </div>
@@ -911,44 +915,30 @@ const Services = () => {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-12">
-          <span className="text-point-text font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">
-            {industry.title}
-          </span>
+    
 
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
             {offering.title}
-            <span className="text-point-text">.</span>
           </h1>
 
           <p className="text-subtext text-base md:text-lg max-w-[820px] mx-auto leading-relaxed font-medium">
             {offering.description}
           </p>
 
-          {offering.additionalDesc && (
-            <div className="mt-6 max-w-[820px] mx-auto">
-              <span className="block text-[10px] uppercase tracking-widest text-point-text font-bold mb-3">
-                Our Approach
-              </span>
-              <p className="text-maintext text-sm md:text-base leading-relaxed font-medium bg-[#F8F9FB] px-6 py-5 rounded-xl border border-slate-200">
-                {offering.additionalDesc}
-              </p>
-            </div>
-          )}
+          
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-          <div className="bg-slate-50 rounded-[2.5rem] p-8 md:p-14 border border-slate-100">
-            <h3 className="text-xs font-bold uppercase tracking-widest mb-8 flex items-center gap-3">
+          <div className="rounded-[2.5rem] p-8 md:p-14">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">
               Services We Offer
-              <div className="h-px w-12 bg-point-text"></div>
             </h3>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {(offering.points || offering.features)?.map((point, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="mt-1 bg-white p-1.5 rounded-lg border border-slate-100 text-point-text">
-                    <Check size={16} />
-                  </div>
+                <div key={idx} className="flex gap-4 items-center ">
+                  <div className="mt-1  rounded-lg  text-point-text">
+<GoDotFill />                  </div>
                   <span className="text-maintext font-medium text-base md:text-lg">
                     {point}
                   </span>
@@ -956,11 +946,20 @@ const Services = () => {
               ))}
             </div>
           </div>
+ </div>
+          {offering.additionalDesc && (
+            <div className=" max-w-[1900px] ">
+          
+              <p className="text-maintext text-xl text-left leading-relaxed font-medium px-14  py-5 rounded-xl ">
+                {offering.additionalDesc}
+              </p>
+            </div>
+          )}
 
           {/* <div className="h-48 md:h-64 bg-maintext rounded-[2.5rem] flex items-center justify-center">
             <Globe size={100} className="text-point-text opacity-20" />
           </div> */}
-        </div>
+       
       </section>
     );
   }
@@ -994,11 +993,11 @@ const Services = () => {
               }
               className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-10 cursor-pointer hover:shadow-2xl transition-all"
             >
-              <h3 className="text-xl md:text-2xl font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 {offer.title}
               </h3>
 
-              <p className="text-subtext text-sm leading-relaxed mb-6">
+              <p className="text-subtext text-md leading-relaxed mb-6">
                 {offer.description}
               </p>
 
@@ -1117,8 +1116,8 @@ if (mainService?.id === "products") {
                 <ArrowUpRight size={20} className="text-slate-300" />
               </div>
 
-              <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-              <p className="text-subtext text-sm line-clamp-3">
+              <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
+              <p className="text-subtext text-md line-clamp-3">
                 {item.description}
               </p>
             </div>
