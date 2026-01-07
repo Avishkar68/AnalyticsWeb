@@ -91,6 +91,7 @@
 import React from "react";
 import { Linkedin, X } from "lucide-react";
 import profile from "../assets/about-neha-data-analytics.jpeg";
+import { FaXTwitter } from "react-icons/fa6";
 
 const OurTeam = () => {
   const member = {
@@ -115,7 +116,7 @@ const OurTeam = () => {
         {/* Header */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-maintext">
-            Meet the Expert
+            Team
           </h2>
         </div>
 
@@ -159,7 +160,7 @@ const OurTeam = () => {
                 rel="noreferrer"
                 className="p-3 bg-gray-100 rounded-full text-maintext hover:bg-point-text hover:text-white transition-colors"
               >
-                <X size={22} />
+                <FaXTwitter size={22} />
               </a>
             </div>
           </div>

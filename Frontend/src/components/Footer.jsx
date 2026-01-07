@@ -1,10 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2, Facebook, Twitter, Instagram } from 'lucide-react';
-
+import sevenisles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const handleOfferingsClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById("offerings")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    } else {
+      document
+        .getElementById("offerings")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
   return (
     <footer className="bg-white pt-16 pb-8 px-8 border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
@@ -13,14 +27,13 @@ const Footer = () => {
           
           {/* Brand Column */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="bg-point-text p-1.5 rounded-lg">
-                <BarChart2 size={20} className="text-white transform rotate-90" />
-              </div>
-              <span className="text-xl font-bold text-maintext tracking-tight">
-              Seveniles
-              </span>
-            </Link>
+          <Link to="/" className="flex items-center z-[120]">
+        <img
+          src={sevenisles_consultancy_logo}
+          alt="SevenIsles Consultancy"
+          className="w-48"
+        />
+      </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
               Analytics and strategy for growing businesses.
             </p>
@@ -40,16 +53,6 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
-              Services
-            </h4>
-            <ul className="space-y-4">
-              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Business Consulting</Link></li>
-              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Data Analytics</Link></li>
-              <li><Link to="/services" className="text-subtext hover:text-point-text text-sm transition-colors">Risk Management</Link></li>
-            </ul>
-          </div>
 
           {/* Information */}
           <div>
@@ -62,15 +65,11 @@ const Footer = () => {
               <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact</Link></li>
             </ul>
           </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:row items-center justify-between gap-6">
-          <p className="text-slate-400 text-sm">
-            © {currentYear} Seveniles Analytics. All rights reserved.
-          </p>
-          
-          <div className="flex items-center gap-4">
+          <div>
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+              Social Links
+            </h4>
+            <div className="flex items-center gap-4">
             <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-[#e4405f] hover:opacity-80 transition-opacity">
               <Instagram size={18} />
             </a>
@@ -81,6 +80,26 @@ const Footer = () => {
               <Facebook size={18} fill="currentColor" />
             </a>
           </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-gray-100 flex flex-col md:row items-center justify-between gap-6">
+          <p className="text-slate-400 text-sm">
+            © {currentYear} Seveniles Analytics. All rights reserved.
+          </p>
+          
+          {/* <div className="flex items-center gap-4">
+            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-[#e4405f] hover:opacity-80 transition-opacity">
+              <Instagram size={18} />
+            </a>
+            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#e8f5fd] text-[#1da1f2] hover:opacity-80 transition-opacity">
+              <Twitter size={18} fill="currentColor" />
+            </a>
+            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#e7f0f7] text-[#3b5998] hover:opacity-80 transition-opacity">
+              <Facebook size={18} fill="currentColor" />
+            </a>
+          </div> */}
         </div>
       </div>
     </footer>

@@ -81,6 +81,7 @@ export const services = [
       {
         id: "banking",
         title: "Banking",
+        imageUrl: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=1200&auto=format&fit=crop",
         description:
           "The banking industry is undergoing rapid change due to digital transformation, increasing regulations, and rising customer expectations. At Sevenisles Consulting, we help banks and financial institutions use data and analytics to improve decision-making and business performance.",
 
@@ -88,6 +89,7 @@ export const services = [
           {
             id: "risk-analytics",
             title: "Risk Analytics",
+            imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
             description:
               "Risk management is a critical part of the banking industry. Banks deal with different types of risks such as credit risk, market risk, operational risk, and fraud risk. Risk analytics uses data, statistics, and models to measure, monitor, and manage these risks effectively.",
             points: [
@@ -127,9 +129,9 @@ export const services = [
       {
   id: "pharmaceutical",
   title: "Pharmaceutical",
-  description: `The pharmaceutical industry operates in a highly regulated and data-intensive environment where timely insights are critical. Sevenisles Consulting supports pharmaceutical companies in using data and analytics to improve research, operations, and commercial performance.
-
-We work with organizations across the pharmaceutical value chain to turn complex data into meaningful insights that support better planning and execution.`,
+  imageUrl: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  description: `The pharmaceutical industry operates in a highly regulated and data-intensive environment where timely insights are critical. Sevenisles Consulting supports pharmaceutical companies in using data and analytics to improve research, operations, and commercial performance. 
+  We work with organizations across the pharmaceutical value chain to turn complex data into meaningful insights that support better planning and execution.`,
   services: [
     "Sample Size Calculation",
     "Statistical Input in Protocol Development",
@@ -225,15 +227,19 @@ We work with organizations across the pharmaceutical value chain to turn complex
     subServices: [
       {
         id: "island-insight",
-        title: "IslandInsight™",
+        title: "BAES",
         description:
-          "A unified business intelligence portal that aggregates data from siloed sources into a single source of truth.",
+          "App for fast data analysis to investigate Bioequivalence",
         points: [
-          "Real-time data ingestion",
-          "Customizable KPI widgets",
-          "Automated executive reporting",
+          "Sample Size Estimation",
+          "PK parameters Estimation",
+          "Statistical Analysis",
+          "Data Visualization",
+          "Impact Analysis with subject exclusion",
+          "Reports for Regulatory Submission",
+
         ],
-        benefits: ["Silo breakdown", "Instant visibility"],
+        benefits: ["Easy to Use", "Economical","Nimble"],
       },
     ],
   },

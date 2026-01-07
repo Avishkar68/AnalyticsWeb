@@ -799,6 +799,394 @@
 // export default Services;
 
 
+// import React, { useEffect } from "react";
+// import { useParams, useNavigate, useSearchParams } from "react-router-dom";
+// import { services } from "../data/servicesData";
+// import {
+//   Check,
+//   ChevronRight,
+//   Globe,
+//   BarChart3,
+//   Users,
+//   ArrowUpRight,
+//   Dot,
+//   StarIcon,
+// } from "lucide-react";
+// import { GoDotFill } from "react-icons/go";
+
+// const Services = () => {
+//   const { id } = useParams();
+//   const [searchParams] = useSearchParams();
+//   const industryId = searchParams.get("industry");
+//   const offerId = searchParams.get("offer");
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [id, industryId, offerId]);
+
+//   const mainService = services.find((s) => s.id === id);
+//   const industry = mainService?.industries?.find((i) => i.id === industryId);
+//   const offering = industry?.offerings?.find((o) => o.id === offerId);
+
+//   /* -------------------------------------------------------------------------- */
+//   /* 1. TRAINING PAGE (CUSTOM LAYOUT)                                            */
+//   /* -------------------------------------------------------------------------- */
+//   if (mainService?.id === "training") {
+//     return (
+//       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+//         <div className="max-w-7xl mx-auto text-center mb-14">
+        
+
+//           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-maintext">
+//             {mainService.title}
+//           </h1>
+
+//           <p className="text-subtext max-w-[900px] mx-auto text-base md:text-lg leading-relaxed">
+//             {mainService.detailedDescription}
+//           </p>
+//         </div>
+
+//         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+//           {mainService.modules.map((module, idx) => (
+//             <div key={idx}>
+//               <h3 className="text-xl font-bold text-point-text mb-3">
+//                 {module.title}
+//               </h3>
+
+//               <ul className="space-y-2 text-subtext text-lg">
+//                 {module.topics.map((topic, i) => (
+//                   <li key={i} className="flex gap-2">
+//                     <span>{topic}</span>
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//     );
+//   }
+
+//   /* -------------------------------------------------------------------------- */
+//   /* PHARMACEUTICAL – DIRECT CONTENT (NO CLASSIFICATION)                         */
+//   /* -------------------------------------------------------------------------- */
+//   if (
+//     mainService?.id === "consulting" &&
+//     industry?.id === "pharmaceutical"
+//   ) {
+//     return (
+//       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+//         <div className="max-w-7xl text-center mx-auto">
+//           <div className="flex flex-col items-center ">
+//           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6"> Pharmaceutical
+//           </h1>
+
+//           <p className="text-base w-[820px] font-medium   md:text-lg leading-relaxed mb-6 whitespace-pre-line">
+//             {industry.description}
+//           </p>
+//           </div>
+
+//           <h3 className="text-xl font-bold text-left uppercase tracking-widest mb-6">
+//             Services we offer
+//           </h3>
+
+//           <ul className="space-y-4 mb-8">
+//             {industry.services.map((item, idx) => (
+//               <li key={idx} className="flex gap-3">
+//                 <div className="flex items-center gap-4" > 
+
+//                 <GoDotFill className="text-point-text" /> 
+//                 <span className="text-lg font-medium">{item}</span>
+//                 </div>
+//               </li>
+//             ))}
+//           </ul>
+
+//           <p className="text-maintext text-lg text-left leading-relaxed">
+//             {industry.approach}
+//           </p>
+//         </div>
+//       </section>
+//     );
+//   }
+
+//   /* -------------------------------------------------------------------------- */
+//   /* 2. OFFERING DETAIL VIEW                                                     */
+//   /* -------------------------------------------------------------------------- */
+//   if (mainService && industry && offering) {
+//     return (
+//       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+//         <div className="max-w-7xl mx-auto text-center mb-2">
+    
+
+//           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
+//             {offering.title}
+//           </h1>
+
+//           <p className="text-subtext text-base md:text-lg max-w-[820px] mx-auto leading-relaxed font-medium">
+//             {offering.description}
+//           </p>
+
+          
+//         </div>
+
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+//           <div className="rounded-[2.5rem] p-8 md:p-14">
+//             <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">
+//               Services We Offer
+//             </h3>
+
+//             <div className="space-y-4">
+//               {(offering.points || offering.features)?.map((point, idx) => (
+//                 <div key={idx} className="flex gap-4 items-center ">
+//                   <div className="mt-1  rounded-lg  text-point-text">
+// <GoDotFill />                  </div>
+//                   <span className="text-maintext font-medium text-base md:text-lg">
+//                     {point}
+//                   </span>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//  </div>
+//           {offering.additionalDesc && (
+//             <div className=" max-w-[1900px] ">
+          
+//               <p className="text-maintext text-xl text-left leading-relaxed font-medium px-14  py-5 rounded-xl ">
+//                 {offering.additionalDesc}
+//               </p>
+//             </div>
+//           )}
+
+//           {/* <div className="h-48 md:h-64 bg-maintext rounded-[2.5rem] flex items-center justify-center">
+//             <Globe size={100} className="text-point-text opacity-20" />
+//           </div> */}
+       
+//       </section>
+//     );
+//   }
+
+//   /* -------------------------------------------------------------------------- */
+//   /* 3. INDUSTRY VIEW                                                           */
+//   /* -------------------------------------------------------------------------- */
+//   if (mainService && industry) {
+//     return (
+//       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+//         <div className="max-w-7xl mx-auto text-center mb-14">
+          
+
+//           <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
+//             {industry.title}
+//           </h2>
+
+//           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">
+//             {industry.description}
+//           </p>
+//         </div>
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//           {industry.offerings.map((offer) => (
+//             <div
+//               key={offer.id}
+//               onClick={() =>
+//                 navigate(
+//                   `/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`
+//                 )
+//               }
+//               className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-10 cursor-pointer hover:shadow-2xl transition-all"
+//             >
+//               <h3 className="text-2xl md:text-3xl font-bold mb-4">
+//                 {offer.title}
+//               </h3>
+
+//               <p className="text-subtext text-md leading-relaxed mb-6">
+//                 {offer.description}
+//               </p>
+
+//               <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
+//                 View Offering <ArrowUpRight size={14} />
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//     );
+//   }
+//   /* -------------------------------------------------------------------------- */
+// /* PRODUCTS – DIRECT CONTENT VIEW                                              */
+// /* -------------------------------------------------------------------------- */
+// if (mainService?.id === "products") {
+//   const product = mainService.subServices?.[0]; // IslandInsight™
+
+//   return (
+//     <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+//       <div className="max-w-7xl mx-auto">
+
+//         {/* Header */}
+//         <div className="text-center mb-0">
+        
+
+//           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
+//             {product.title}
+//           </h1>
+
+//           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">
+//             {product.description}
+//           </p>
+//         </div>
+
+//         {/* Points */}
+//         <div className="rounded-[2.5rem] p-8 md:p-14 md:pl-40">
+//             <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">
+//               Services We Offer
+//             </h3>
+
+//             <div className="space-y-4 ">
+//               {(product.points)?.map((point, idx) => (
+//                 <div key={idx} className="flex gap-4 items-center ">
+//                   <div className="mt-1  rounded-lg  text-point-text">
+// <GoDotFill />                  </div>
+//                   <span className="text-maintext font-medium text-base md:text-lg">
+//                     {point}
+//                   </span>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+
+//         {/* Benefits */}
+//         <div className="max-w-4xl mx-auto bg-[#F8F9FB] border border-slate-200 rounded-[2.5rem] p-8 md:p-6">
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+//             {product.benefits.map((benefit, idx) => (
+//               <div key={idx} className="flex gap-3">
+//                 <StarIcon size={16} fill="currentColor" className="text-point-text mt-1" />
+//                 <span className="text-maintext font-medium">{benefit}</span>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
+
+
+//   /* -------------------------------------------------------------------------- */
+//   /* 4. SERVICE CATEGORY VIEW                                                    */
+//   /* -------------------------------------------------------------------------- */
+//   if (mainService) {
+//     const items = mainService.industries || mainService.subServices || [];
+
+//     return (
+//       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+//         <div className="max-w-7xl mx-auto text-center mb-14">
+//           {/* <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
+//             Category Overview
+//           </span> */}
+
+//           <h2 className="text-3xl md:text-5xl font-bold mb-6">
+//             {mainService.title}
+//           </h2>
+
+//           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">
+//             {mainService.detailedDescription}
+//           </p>
+//         </div>
+
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {items.map((item) => (
+//             <div
+//               key={item.id}
+//               onClick={() =>
+//                 mainService.industries
+//                   ? navigate(
+//                       `/services/${mainService.id}?industry=${item.id}`
+//                     )
+//                   : navigate(`/services/${mainService.id}?sub=${item.id}`)
+//               }
+//               className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-10 cursor-pointer hover:shadow-2xl transition-all"
+//             >
+//               <div className="mb-6 flex justify-between">
+//                 <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center">
+//                   <BarChart3 size={24} />
+//                 </div>
+//                 <ArrowUpRight size={20} className="text-slate-300" />
+//               </div>
+
+//               <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
+//               <p className="text-subtext text-md line-clamp-3">
+//                 {item.description}
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+//     );
+//   }
+
+//   /* -------------------------------------------------------------------------- */
+//   /* 5. ROOT SERVICES PAGE                                                       */
+//   /* -------------------------------------------------------------------------- */
+//   return (
+//     <section className="bg-[#F9FAFB] pt-12 md:pt-16 pb-20 px-6 min-h-screen">
+//       <div className="max-w-7xl mx-auto text-center mb-14">
+//         <span className="text-point-text uppercase tracking-[0.2em] text-[10px] font-bold mb-4 block">
+//           SevenIslands Expertise
+//         </span>
+
+//         <h2 className="text-3xl md:text-5xl font-bold mb-6">
+//           What We Offer<span className="text-point-text">.</span>
+//         </h2>
+
+//         <p className="text-subtext max-w-[820px] mx-auto">
+//           We build analytical systems required for the next generation of
+//           business.
+//         </p>
+//       </div>
+
+//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//         {services.map((service, index) => (
+//           <div
+//             key={service.id}
+//             onClick={() => navigate(`/services/${service.id}`)}
+//             className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 cursor-pointer hover:shadow-2xl transition-all"
+//           >
+//             <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8">
+//               {service.id === "consulting" ? (
+//                 <Globe />
+//               ) : service.id === "training" ? (
+//                 <Users />
+//               ) : (
+//                 <BarChart3 />
+//               )}
+//             </div>
+
+//             <span className="text-6xl font-black opacity-5 absolute top-10 right-10">
+//               0{index + 1}
+//             </span>
+
+//             <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+//             <p className="text-subtext text-sm mb-8">
+//               {service.shortDescription}
+//             </p>
+
+//             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
+//               Explore Category <ChevronRight size={16} />
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Services;
+
+
+// second repetatipn avishkar
+
 import React, { useEffect } from "react";
 import { useParams, useNavigate, useSearchParams } from "react-router-dom";
 import { services } from "../data/servicesData";
@@ -809,7 +1197,7 @@ import {
   BarChart3,
   Users,
   ArrowUpRight,
-  Dot,
+  StarIcon,
 } from "lucide-react";
 import { GoDotFill } from "react-icons/go";
 
@@ -835,12 +1223,9 @@ const Services = () => {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-14">
-        
-
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-maintext">
             {mainService.title}
           </h1>
-
           <p className="text-subtext max-w-[900px] mx-auto text-base md:text-lg leading-relaxed">
             {mainService.detailedDescription}
           </p>
@@ -852,7 +1237,6 @@ const Services = () => {
               <h3 className="text-xl font-bold text-point-text mb-3">
                 {module.title}
               </h3>
-
               <ul className="space-y-2 text-subtext text-lg">
                 {module.topics.map((topic, i) => (
                   <li key={i} className="flex gap-2">
@@ -868,41 +1252,30 @@ const Services = () => {
   }
 
   /* -------------------------------------------------------------------------- */
-  /* PHARMACEUTICAL – DIRECT CONTENT (NO CLASSIFICATION)                         */
+  /* PHARMACEUTICAL – DIRECT CONTENT                                           */
   /* -------------------------------------------------------------------------- */
-  if (
-    mainService?.id === "consulting" &&
-    industry?.id === "pharmaceutical"
-  ) {
+  if (mainService?.id === "consulting" && industry?.id === "pharmaceutical") {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl text-center mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6"> Pharmaceutical
-          </h1>
-
-          <p className="text-base w-[1300px] font-semibold   md:text-lg leading-relaxed mb-6 whitespace-pre-line">
-            {industry.description}
-          </p>
-
-          <h3 className="text-xl font-bold text-left uppercase tracking-widest mb-6">
-            Services we offer
-          </h3>
-
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">Pharmaceutical</h1>
+            <p className="text-base w-full max-w-[820px] font-medium md:text-lg leading-relaxed mb-6 whitespace-pre-line">
+              {industry.description}
+            </p>
+          </div>
+          <h3 className="text-xl font-bold text-left uppercase tracking-widest mb-6">Services we offer</h3>
           <ul className="space-y-4 mb-8">
             {industry.services.map((item, idx) => (
               <li key={idx} className="flex gap-3">
-                <div className="flex items-center gap-4" > 
-
-                <GoDotFill className="text-point-text" /> 
-                <span className="text-lg font-medium">{item}</span>
+                <div className="flex items-center gap-4">
+                  <GoDotFill className="text-point-text" />
+                  <span className="text-lg font-medium">{item}</span>
                 </div>
               </li>
             ))}
           </ul>
-
-          <p className="text-maintext text-lg text-left leading-relaxed">
-            {industry.approach}
-          </p>
+          <p className="text-maintext text-lg text-left leading-relaxed">{industry.approach}</p>
         </div>
       </section>
     );
@@ -915,94 +1288,63 @@ const Services = () => {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-12">
-    
-
-          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
-            {offering.title}
-          </h1>
-
+          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{offering.title}</h1>
           <p className="text-subtext text-base md:text-lg max-w-[820px] mx-auto leading-relaxed font-medium">
             {offering.description}
           </p>
-
-          
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
           <div className="rounded-[2.5rem] p-8 md:p-14">
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">
-              Services We Offer
-            </h3>
-
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">Services We Offer</h3>
             <div className="space-y-4">
               {(offering.points || offering.features)?.map((point, idx) => (
-                <div key={idx} className="flex gap-4 items-center ">
-                  <div className="mt-1  rounded-lg  text-point-text">
-<GoDotFill />                  </div>
-                  <span className="text-maintext font-medium text-base md:text-lg">
-                    {point}
-                  </span>
+                <div key={idx} className="flex gap-4 items-center">
+                  <div className="mt-1 rounded-lg text-point-text"><GoDotFill /></div>
+                  <span className="text-maintext font-medium text-base md:text-lg">{point}</span>
                 </div>
               ))}
             </div>
           </div>
- </div>
-          {offering.additionalDesc && (
-            <div className=" max-w-[1900px] ">
-          
-              <p className="text-maintext text-xl text-left leading-relaxed font-medium px-14  py-5 rounded-xl ">
-                {offering.additionalDesc}
-              </p>
-            </div>
-          )}
-
-          {/* <div className="h-48 md:h-64 bg-maintext rounded-[2.5rem] flex items-center justify-center">
-            <Globe size={100} className="text-point-text opacity-20" />
-          </div> */}
-       
+        </div>
+        {offering.additionalDesc && (
+          <div className="max-w-7xl mx-auto px-14 py-5">
+            <p className="text-maintext text-xl text-left leading-relaxed font-medium rounded-xl">{offering.additionalDesc}</p>
+          </div>
+        )}
       </section>
     );
   }
 
   /* -------------------------------------------------------------------------- */
-  /* 3. INDUSTRY VIEW                                                           */
+  /* 3. INDUSTRY VIEW (E.G. BANKING SUB-PAGES)                                   */
   /* -------------------------------------------------------------------------- */
   if (mainService && industry) {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-14">
-          
-
-          <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
-            {industry.title}
-          </h2>
-
-          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">
-            {industry.description}
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{industry.title}</h2>
+          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">{industry.description}</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {industry.offerings.map((offer) => (
             <div
               key={offer.id}
-              onClick={() =>
-                navigate(
-                  `/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`
-                )
-              }
-              className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-10 cursor-pointer hover:shadow-2xl transition-all"
+              onClick={() => navigate(`/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`)}
+              className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                {offer.title}
-              </h3>
-
-              <p className="text-subtext text-md leading-relaxed mb-6">
-                {offer.description}
-              </p>
-
-              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
-                View Offering <ArrowUpRight size={14} />
+              <div className="w-full h-56 overflow-hidden">
+                <img 
+                  src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"} 
+                  alt={offer.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-8 md:p-10">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">{offer.title}</h3>
+                <p className="text-subtext text-md leading-relaxed mb-6">{offer.description}</p>
+                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
+                  View Offering <ArrowUpRight size={14} />
+                </div>
               </div>
             </div>
           ))}
@@ -1010,116 +1352,78 @@ const Services = () => {
       </section>
     );
   }
+
   /* -------------------------------------------------------------------------- */
-/* PRODUCTS – DIRECT CONTENT VIEW                                              */
-/* -------------------------------------------------------------------------- */
-if (mainService?.id === "products") {
-  const product = mainService.subServices?.[0]; // IslandInsight™
-
-  return (
-    <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
-      <div className="max-w-7xl mx-auto">
-
-        {/* Header */}
-        <div className="text-center mb-14">
-          <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
-            Product
-          </span>
-
-          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
-            {product.title}
-            <span className="text-point-text">.</span>
-          </h1>
-
-          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">
-            {product.description}
-          </p>
-        </div>
-
-        {/* Points */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h3 className="text-xs font-bold uppercase tracking-widest mb-6">
-            What it does
-          </h3>
-
-          <ul className="space-y-4">
-            {product.points.map((point, idx) => (
-              <li key={idx} className="flex gap-3">
-                <Check size={16} className="text-point-text mt-1" />
-                <span className="text-maintext font-medium">{point}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Benefits */}
-        <div className="max-w-4xl mx-auto bg-[#F8F9FB] border border-slate-200 rounded-[2.5rem] p-8 md:p-12">
-          <h3 className="text-xs font-bold uppercase tracking-widest mb-6">
-            Business Impact
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {product.benefits.map((benefit, idx) => (
-              <div key={idx} className="flex gap-3">
-                <ArrowUpRight size={16} className="text-point-text mt-1" />
-                <span className="text-maintext font-medium">{benefit}</span>
-              </div>
-            ))}
+  /* PRODUCTS – DIRECT CONTENT VIEW                                              */
+  /* -------------------------------------------------------------------------- */
+  if (mainService?.id === "products") {
+    const product = mainService.subServices?.[0];
+    return (
+      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-0">
+            <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{product.title}</h1>
+            <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">{product.description}</p>
+          </div>
+          <div className="rounded-[2.5rem] p-8 md:p-14 md:pl-40">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">Services We Offer</h3>
+            <div className="space-y-4">
+              {product.points?.map((point, idx) => (
+                <div key={idx} className="flex gap-4 items-center">
+                  <div className="mt-1 text-point-text"><GoDotFill /></div>
+                  <span className="text-maintext font-medium text-base md:text-lg">{point}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="max-w-4xl mx-auto bg-[#F8F9FB] border border-slate-200 rounded-[2.5rem] p-8 md:p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {product.benefits.map((benefit, idx) => (
+                <div key={idx} className="flex gap-3">
+                  <StarIcon size={16} fill="currentColor" className="text-point-text mt-1" />
+                  <span className="text-maintext font-medium">{benefit}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-
-      </div>
-    </section>
-  );
-}
-
+      </section>
+    );
+  }
 
   /* -------------------------------------------------------------------------- */
-  /* 4. SERVICE CATEGORY VIEW                                                    */
+  /* 4. SERVICE CATEGORY VIEW (LISTING INDUSTRIES/SUB-SERVICES)                 */
   /* -------------------------------------------------------------------------- */
   if (mainService) {
     const items = mainService.industries || mainService.subServices || [];
-
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-14">
-          {/* <span className="text-point-text uppercase tracking-[0.3em] text-[10px] font-bold mb-4 block">
-            Category Overview
-          </span> */}
-
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            {mainService.title}
-          </h2>
-
-          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">
-            {mainService.detailedDescription}
-          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">{mainService.title}</h2>
+          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">{mainService.detailedDescription}</p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {items.map((item) => (
             <div
               key={item.id}
-              onClick={() =>
-                mainService.industries
-                  ? navigate(
-                      `/services/${mainService.id}?industry=${item.id}`
-                    )
-                  : navigate(`/services/${mainService.id}?sub=${item.id}`)
-              }
-              className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-10 cursor-pointer hover:shadow-2xl transition-all"
+              onClick={() => mainService.industries ? navigate(`/services/${mainService.id}?industry=${item.id}`) : navigate(`/services/${mainService.id}?sub=${item.id}`)}
+              className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
-              <div className="mb-6 flex justify-between">
-                <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center">
-                  <BarChart3 size={24} />
-                </div>
-                <ArrowUpRight size={20} className="text-slate-300" />
+              <div className="w-full h-52 overflow-hidden">
+                <img 
+                  src={item.imageUrl || "https://images.unsplash.com/photo-1551288049-bbda38a5f9a2?q=80&w=800"} 
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
-
-              <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-              <p className="text-subtext text-md line-clamp-3">
-                {item.description}
-              </p>
+              <div className="p-8 md:p-10">
+                <div className="mb-6 flex justify-between">
+                  <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center"><BarChart3 size={24} /></div>
+                  <ArrowUpRight size={20} className="text-slate-300" />
+                </div>
+                <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
+                <p className="text-subtext text-md line-clamp-3">{item.description}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -1128,53 +1432,41 @@ if (mainService?.id === "products") {
   }
 
   /* -------------------------------------------------------------------------- */
-  /* 5. ROOT SERVICES PAGE                                                       */
+  /* 5. ROOT SERVICES PAGE (MAIN CATEGORIES)                                     */
   /* -------------------------------------------------------------------------- */
   return (
     <section className="bg-[#F9FAFB] pt-12 md:pt-16 pb-20 px-6 min-h-screen">
       <div className="max-w-7xl mx-auto text-center mb-14">
-        <span className="text-point-text uppercase tracking-[0.2em] text-[10px] font-bold mb-4 block">
-          SevenIslands Expertise
-        </span>
-
-        <h2 className="text-3xl md:text-5xl font-bold mb-6">
-          What We Offer<span className="text-point-text">.</span>
-        </h2>
-
-        <p className="text-subtext max-w-[820px] mx-auto">
-          We build analytical systems required for the next generation of
-          business.
-        </p>
+        <span className="text-point-text uppercase tracking-[0.2em] text-[10px] font-bold mb-4 block">SevenIslands Expertise</span>
+        <h2 className="text-3xl md:text-5xl font-bold mb-6">What We Offer<span className="text-point-text">.</span></h2>
+        <p className="text-subtext max-w-[820px] mx-auto">We build analytical systems required for the next generation of business.</p>
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={service.id}
             onClick={() => navigate(`/services/${service.id}`)}
-            className="group bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 cursor-pointer hover:shadow-2xl transition-all"
+            className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col relative"
           >
-            <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8">
-              {service.id === "consulting" ? (
-                <Globe />
-              ) : service.id === "training" ? (
-                <Users />
-              ) : (
-                <BarChart3 />
-              )}
+            {/* Top Image Section */}
+            <div className="w-full h-64 overflow-hidden">
+              <img 
+                src={service.imageUrl || "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800"} 
+                alt={service.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
             </div>
-
-            <span className="text-6xl font-black opacity-5 absolute top-10 right-10">
-              0{index + 1}
-            </span>
-
-            <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-            <p className="text-subtext text-sm mb-8">
-              {service.shortDescription}
-            </p>
-
-            <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
-              Explore Category <ChevronRight size={16} />
+            
+            <div className="p-8 md:p-12">
+              <div className="w-16 h-16 bg-slate-50 rounded-2xl flex items-center justify-center mb-8">
+                {service.id === "consulting" ? <Globe size={28}/> : service.id === "training" ? <Users size={28}/> : <BarChart3 size={28}/>}
+              </div>
+              <span className="text-6xl font-black opacity-5 absolute bottom-10 right-10">0{index + 1}</span>
+              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <p className="text-subtext text-sm mb-8">{service.shortDescription}</p>
+              <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB] group-hover:text-point-text transition-colors">
+                Explore Category <ChevronRight size={16} />
+              </div>
             </div>
           </div>
         ))}
