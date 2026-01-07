@@ -875,15 +875,15 @@ const Services = () => {
   ) {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
+        <div className="max-w-7xl text-center mx-auto">
+          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6"> Pharmaceutical
           </h1>
 
           <p className="text-subtext text-base md:text-lg leading-relaxed mb-6 whitespace-pre-line">
             {industry.description}
           </p>
 
-          <h3 className="text-xs font-bold uppercase tracking-widest mb-6">
+          <h3 className="text-xl font-bold text-left uppercase tracking-widest mb-6">
             Services we offer
           </h3>
 
@@ -972,13 +972,10 @@ const Services = () => {
     return (
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-14">
-          <span className="text-point-text uppercase tracking-[0.2em] text-[10px] font-bold mb-4 block">
-            Industry
-          </span>
+          
 
           <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">
             {industry.title}
-            <span className="text-point-text">.</span>
           </h2>
 
           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">
