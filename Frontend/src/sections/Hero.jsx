@@ -358,7 +358,7 @@ const Hero = () => {
                 hover:bg-point-text hover:text-black hover:border-cyan-400
                 transition-all duration-300 uppercase tracking-widest text-sm font-semibold"
               >
-                Discover Now
+                Explore
               </motion.button>
             </Link>
           </motion.div>
