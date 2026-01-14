@@ -116,7 +116,7 @@ const OurTeam = () => {
         {/* Header */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-bold text-maintext">
-            Team
+            Our Team 
           </h2>
         </div>
 

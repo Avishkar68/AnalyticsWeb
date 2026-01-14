@@ -65,11 +65,10 @@ import { useNavigate } from "react-router-dom";
 import { services } from "../data/servicesData";
 import { ChevronRight } from "lucide-react";
 
-// 🔹 Temporary fallback images (replace later with real ones)
 const fallbackImages = [
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
-  "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
-  "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+  "https://images.unsplash.com/photo-1758518727613-00192aed759b?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
 const OurServices = () => {
@@ -77,7 +76,7 @@ const OurServices = () => {
   const featuredServices = services.slice(0, 3);
 
   return (
-    <section className="bg-[#F9FAFB] pt-16 pb-20 px-6">
+    <section className="bg-[#F9FAFB] pt-20  pb-20 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

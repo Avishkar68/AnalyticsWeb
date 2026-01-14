@@ -83,7 +83,7 @@ export const services = [
         title: "Banking",
         imageUrl: "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?q=80&w=1200&auto=format&fit=crop",
         description:
-          "The banking industry is undergoing rapid change due to digital transformation, increasing regulations, and rising customer expectations. At Sevenisles Consulting, we help banks and financial institutions use data and analytics to improve decision-making and business performance.",
+          "The banking industry is undergoing rapid change due to digital transformation, increasing regulations, and rising customer expectations. At SevenIsles Consultancy, we help banks and financial institutions use data and analytics to improve decision-making and business performance.",
 
         offerings: [
           {
@@ -101,14 +101,14 @@ export const services = [
               "Risk dashboards and reporting",
             ],
             additionalDesc:
-              "Sevenisles Consulting combines deep domain understanding with strong analytical expertise to help banking teams make informed, reliable, and timely risk decisions.",
+              "SevenIsles Consultancy combines deep domain understanding with strong analytical expertise to help banking teams make informed, reliable, and timely risk decisions.",
           },
 
           {
             id: "marketing-analytics",
             title: "Marketing Analytics",
             description:
-              "Marketing analytics helps banks understand customer behavior, improve campaign performance, and increase customer value using data and statistics. It enables smarter targeting, personalization, and better return on marketing spend.At Sevenisles Consulting, we apply statistical techniques to support data-driven marketing decisions in banking.",
+              "Marketing analytics helps banks understand customer behavior, improve campaign performance, and increase customer value using data and statistics. It enables smarter targeting, personalization, and better return on marketing spend.At SevenIsles Consultancy, we apply statistical techniques to support data-driven marketing decisions in banking.",
             points: [
               "Descriptive statistics to understand customer profiles and behavior",
               "Segmentation techniques to group customers based on needs and value",
@@ -130,8 +130,7 @@ export const services = [
   id: "pharmaceutical",
   title: "Pharmaceutical",
   imageUrl: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=2079&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  description: `The pharmaceutical industry operates in a highly regulated and data-intensive environment where timely insights are critical. Sevenisles Consulting supports pharmaceutical companies in using data and analytics to improve research, operations, and commercial performance. 
-  We work with organizations across the pharmaceutical value chain to turn complex data into meaningful insights that support better planning and execution.`,
+  description: `The pharmaceutical industry operates in a highly regulated and data-intensive environment where timely insights are critical. SevenIsles Consultancy supports pharmaceutical companies in using data and analytics to improve research, operations, and commercial performance. We work with organizations across the pharmaceutical value chain to turn complex data into meaningful insights that support better planning and execution.`,
   services: [
     "Sample Size Calculation",
     "Statistical Input in Protocol Development",
@@ -141,7 +140,7 @@ export const services = [
     "Create Statistical Reports & CDISC-Compliant Data Submissions",
   ],
   approach:
-    "With a practical and structured approach, Sevenisles Consulting helps pharma teams use analytics effectively while ensuring accuracy, compliance, and business relevance.",
+    "With a practical and structured approach, SevenIsles Consultancy helps pharma teams use analytics effectively while ensuring accuracy, compliance, and business relevance.",
 },
     ],
   },
@@ -155,7 +154,7 @@ export const services = [
   shortDescription:
     "Practical and industry-focused training programs in analytics and data skills for professionals and teams.",
   detailedDescription:
-    "At Sevenisles Consulting, we provide practical and industry-focused training programs in analytics and data skills for professionals and teams. Our courses are designed to build capability from basic data understanding to advanced analytics helping you make informed decisions, solve real business problems, and drive measurable impact. Training can be delivered online, on-site, or in a blended format with hands-on learning based on real business scenarios.",
+    "At SevenIsles Consultancy, we provide practical and industry-focused training programs in analytics and data skills for professionals and teams. Our courses are designed to build capability from basic data understanding to advanced analytics helping you make informed decisions, solve real business problems, and drive measurable impact. Training can be delivered online, on-site, or in a blended format with hands-on learning based on real business scenarios.",
 
   modules: [
     {
@@ -222,7 +221,7 @@ export const services = [
     shortDescription:
       "We build custom analytics products that transform complex algorithms into intuitive business interfaces.",
     detailedDescription:
-      "SevenIslands develops proprietary Analytics-as-a-Product solutions that integrate directly into your IT ecosystem.",
+      "SevenIsles Consultancy develops proprietary Analytics-as-a-Product solutions that integrate directly into your IT ecosystem.",
 
     subServices: [
       {

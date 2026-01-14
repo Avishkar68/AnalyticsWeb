@@ -1260,7 +1260,7 @@ const Services = () => {
         <div className="max-w-7xl text-center mx-auto">
           <div className="flex flex-col items-center">
             <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">Pharmaceutical</h1>
-            <p className="text-base w-full max-w-[820px] font-medium md:text-lg leading-relaxed mb-6 whitespace-pre-line">
+            <p className="text-base w-full max-w-[1020px] font-medium md:text-lg leading-relaxed mb-6 whitespace-pre-line">
               {industry.description}
             </p>
           </div>
@@ -1297,11 +1297,11 @@ const Services = () => {
       <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{offering.title}</h1>
-          <p className="text-subtext text-base md:text-lg max-w-[820px] mx-auto leading-relaxed font-medium">
+          <p className="text-subtext text-base md:text-lg max-w-[1020px] mx-auto leading-relaxed font-medium">
             {offering.description}
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
+        <div className="flex gap-8 md:gap-12 max-w-7xl mx-auto">
           <div className="rounded-[2.5rem] p-8 md:p-14">
             <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">Services We Offer</h3>
             <div className="space-y-4">
@@ -1340,7 +1340,7 @@ const Services = () => {
               onClick={() => navigate(`/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`)}
               className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
-              <div className="w-full h-56 overflow-hidden">
+              <div className="w-full h-60 overflow-hidden">
                 <img
                   src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"}
                   alt={offer.title}
@@ -1350,10 +1350,14 @@ const Services = () => {
               <div className="p-8 md:p-10">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">{offer.title}</h3>
                 <p className="text-subtext text-md leading-relaxed mb-6">{offer.description}</p>
-                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
+                <div className="flex items-center gap-2 text-[15px] font-bold uppercase tracking-widest  px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
                   View Offering <ArrowUpRight size={14} />
                 </div>
               </div>
+              
+
+
+
             </div>
           ))}
         </div>

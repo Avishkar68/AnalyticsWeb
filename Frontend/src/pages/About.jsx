@@ -10,9 +10,7 @@ const About = () => {
 
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <p className="text-[10px] md:text-sm font-semibold text-point-text uppercase tracking-widest mb-2">
-            About Us
-          </p>
+       
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-maintext mb-4 leading-tight">
               Data Analytics & Strategic Consulting Company 
@@ -31,7 +29,7 @@ const About = () => {
           <div className="order-1">
             <div className="relative mb-6 md:mb-8">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                src="https://plus.unsplash.com/premium_photo-1661431396990-7bc93ef3edec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Team strategy meeting"
                 className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-sm"
               />
