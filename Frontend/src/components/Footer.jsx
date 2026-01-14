@@ -47,7 +47,6 @@ const Footer = () => {
             <ul className="space-y-4">
               <li><Link to="/about" className="text-subtext hover:text-point-text text-sm transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact Us</Link></li>
-              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Careers</Link></li>
               <li><Link to="/blog" className="text-subtext hover:text-point-text text-sm transition-colors">Blog</Link></li>
             </ul>
           </div>
@@ -60,8 +59,8 @@ const Footer = () => {
               Information
             </h4>
             <ul className="space-y-4">
-              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Privacy Policy</Link></li>
-              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Terms & Conditions</Link></li>
+              {/* <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Privacy Policy</Link></li>
+              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Terms & Conditions</Link></li> */}
               <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact</Link></li>
             </ul>
           </div>

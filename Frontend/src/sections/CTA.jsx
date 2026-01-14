@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
     return (
@@ -8,9 +9,13 @@ const CTA = () => {
                     Let’s build the <span className="text-point-text font-semibold">future</span> <br className="hidden md:block" />
                     of your business together.
                 </p>
+                            <Link to="/contact">
+
                 <button className="mt-8 hover:bg-button-hover-bg hover:border-point-text text-white border cursor-pointer border-white px-8 py-3 rounded-full font-medium transition w-fit sm:w-auto">
                     Connect With Us
                 </button>
+                            </Link>
+
             </div>
         </div>
     )
