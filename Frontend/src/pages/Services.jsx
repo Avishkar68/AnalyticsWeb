@@ -1340,14 +1340,14 @@ const Services = () => {
               onClick={() => navigate(`/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`)}
               className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
-              <div className="w-full h-80 overflow-hidden">
+              <div className="w-full  h-80 overflow-hidden">
                 <img
                   src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"}
                   alt={offer.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="p-8 md:p-10 h-80 flex flex-col justify-between">
+              <div className="p-8 md:p-10 md:h-80 flex flex-col justify-between">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">{offer.title}</h3>
                 <p className="text-subtext text-md leading-relaxed mb-6">{offer.description}</p>
                 <div className="flex items-center gap-2 text-[15px] font-bold uppercase tracking-widest  px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
