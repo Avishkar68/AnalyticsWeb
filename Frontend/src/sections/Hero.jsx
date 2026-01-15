@@ -25,12 +25,12 @@ const slides = [
   {
     id: 4,
     subtitle: "Enable data-driven success",
-    image: hero3, // Use imported hero3
+    image: hero4, // Use imported hero3
   },
   {
     id: 5,
     subtitle: "Transform your business with our innovative solutions",
-    image: hero4, // Use imported hero4
+    image: hero3, // Use imported hero4
   },
   {
     id: 6,
