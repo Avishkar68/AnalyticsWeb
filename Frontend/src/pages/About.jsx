@@ -50,7 +50,7 @@ const About = () => {
 
           {/* Right Cards - Mission & Vision Clubbed */}
           <div className="order-2 pt-0 md:pt-0">
-            <div className="bg-white rounded-2xl md:rounded-3xl p-8 md:p-10 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-8 md:p-6 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-maintext mb-3 flex items-center gap-2">
                   Our Mission
@@ -60,7 +60,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="pt-8 border-t border-slate-100">
+              <div className="pt-2 ">
                 <h3 className="text-xl font-bold text-maintext mb-3 flex items-center gap-2">
                   Our Vision
                 </h3>

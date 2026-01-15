@@ -104,7 +104,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import SevenIsles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png"
+import SevenIsles_consultancy_logo from "../assets/SILogo.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
