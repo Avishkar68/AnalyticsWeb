@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2, Facebook, Twitter, Instagram } from 'lucide-react';
-import SevenIsles_consultancy_logo from "../assets/SevenIsles_consultancy_logo.png";
+import SevenIsles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png"
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const handleOfferingsClick = () => {
