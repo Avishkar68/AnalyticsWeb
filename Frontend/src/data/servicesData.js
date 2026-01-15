@@ -215,31 +215,32 @@ export const services = [
   /* -------------------------------------------------------------------------- */
   /* PRODUCTS                                                                   */
   /* -------------------------------------------------------------------------- */
-  {
-    id: "products",
-    title: "Products",
-    shortDescription:
-      "We build custom analytics products that transform complex algorithms into intuitive business interfaces.",
-    detailedDescription:
-      "SevenIsles Consultancy develops proprietary Analytics-as-a-Product solutions that integrate directly into your IT ecosystem.",
-
-    subServices: [
-      {
-        id: "island-insight",
-        title: "BAES",
-        description:
-          "App for fast data analysis to investigate Bioequivalence",
-        points: [
-          "Sample Size Estimation",
-          "PK parameters Estimation",
-          "Statistical Analysis",
-          "Data Visualization",
-          "Impact Analysis with subject exclusion",
-          "Reports for Regulatory Submission",
-
-        ],
-        benefits: ["Easy to Use", "Economical","Nimble"],
-      },
-    ],
-  },
+/* -------------------------------------------------------------------------- */
+/* PRODUCTS                                                                   */
+/* -------------------------------------------------------------------------- */
+{
+  id: "products",
+  title: "Products",
+  shortDescription: "We build custom analytics products that transform complex algorithms into intuitive business interfaces.",
+  detailedDescription: "SevenIsles Consultancy develops proprietary Analytics-as-a-Product solutions that integrate directly into your IT ecosystem.",
+  
+  // Changed from subServices to offerings to match Industry logic
+  offerings: [
+    {
+      id: "baes", // simplified ID
+      title: "BAES",
+      imageUrl: "https://res.cloudinary.com/dlwy6z6mn/image/upload/v1768499181/productsimg1_lcrwna.png", // Add an image URL
+      description: "App for fast data analysis to investigate Bioequivalence",
+      points: [
+        "Sample Size Estimation",
+        "PK parameters Estimation",
+        "Statistical Analysis",
+        "Data Visualization",
+        "Impact Analysis with subject exclusion",
+        "Reports for Regulatory Submission",
+      ],
+      benefits: ["Easy to Use", "Economical", "Nimble"],
+    },
+  ],
+},
 ];
