@@ -10,12 +10,12 @@ const slides = [
   {
     id: 1,
     subtitle: "Where Data Ends, Insight Begins.",
-    image: hero1, // Use imported hero1
+    image: hero2, // Use imported hero1
   },
   {
     id: 2,
     subtitle: "Build a smarter, insight-led enterprise",
-    image: hero2, // Use imported hero2
+    image: hero1, // Use imported hero2
   },
   {
     id: 3,
