@@ -1264,15 +1264,17 @@ const Services = () => {
               {industry.description}
             </p>
           </div>
+
+          <div className="px-8">
           <h3 className="text-xl font-bold uppercase tracking-widest mb-6 
                text-left md:text-left">
             Services we offer
           </h3>
 
-          <ul className="space-y-3 md:space-y-4 mb-8">
+          <ul className="space-y-3 md:space-y-2 mb-8">
             {industry.services.map((item, idx) => (
               <li key={idx} className="flex justify-start md:justify-start">
-                <div className="flex items-start gap-3 max-w-[700px]">
+                <div className="flex items-start gap-3  max-w-[700px]">
                   <GoDotFill className="text-point-text mt-1 shrink-0" />
                   <span className="text-base md:text-lg font-medium text-left">
                     {item}
@@ -1283,7 +1285,9 @@ const Services = () => {
           </ul>
 
 
+
           <p className="text-maintext text-lg text-left leading-relaxed">{industry.approach}</p>
+          </div>
         </div>
       </section>
     );
@@ -1302,8 +1306,8 @@ const Services = () => {
           </p>
         </div>
         <div className="flex gap-8 md:gap-12 max-w-7xl mx-auto">
-          <div className="rounded-[2.5rem] p-8 md:p-14">
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 flex items-center gap-3">Services We Offer</h3>
+          <div className="rounded-[2.5rem] p-4 md:p-6">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-3 flex items-center gap-3">Services We Offer</h3>
             <div className="space-y-2">
               {(offering.points || offering.features)?.map((point, idx) => (
                 <div key={idx} className="flex gap-4 items-center">
@@ -1315,8 +1319,8 @@ const Services = () => {
           </div>
         </div>
         {offering.additionalDesc && (
-          <div className="md:max-w-7xl mx-auto md:px-14 py-2">
-            <p className="text-maintext text-base md:text-xl text-left leading-relaxed font-medium rounded-xl">{offering.additionalDesc}</p>
+          <div className="md:max-w-7xl mx-auto md:px-6 ">
+            <p className="text-maintext text-base md:text-lg text-left leading-relaxed  rounded-xl">{offering.additionalDesc}</p>
           </div>
         )}
       </section>
@@ -1371,15 +1375,15 @@ const Services = () => {
   if (mainService?.id === "products") {
     const product = mainService.subServices?.[0];
     return (
-      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-0">
             <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{product.title}</h1>
             <p className="text-subtext md:max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">{product.description}</p>
           </div>
           <div className="rounded-[2.5rem] p-8 md:p-14 md:pl-40">
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">Services We Offer</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 flex items-center gap-3">Services We Offer</h3>
+            <div className="space-y-2">
               {product.points?.map((point, idx) => (
                 <div key={idx} className="flex gap-4 items-center">
                   <div className="mt-1 text-point-text"><GoDotFill /></div>

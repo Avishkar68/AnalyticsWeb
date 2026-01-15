@@ -89,7 +89,7 @@ export const services = [
           {
             id: "risk-analytics",
             title: "Risk Analytics",
-            imageUrl: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop",
+            imageUrl: "https://plus.unsplash.com/premium_photo-1663050693144-6b5bc76d2214?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1pbi1zYW1lLXNlcmllc3wxfHx8ZW58MHx8fHx8",
             description:
               "Risk management is a critical part of the banking industry. Banks deal with different types of risks such as credit risk, market risk, operational risk, and fraud risk. Risk analytics uses data, statistics, and models to measure, monitor, and manage these risks effectively.",
             points: [
@@ -154,7 +154,7 @@ export const services = [
   shortDescription:
     "Practical and industry-focused training programs in analytics and data skills for professionals and students.",
   detailedDescription:
-    "At SevenIsles Consultancy, we provide practical and industry-focused training programs in analytics and data skills for professionals and teams. Our courses are designed to build capability from basic data understanding to advanced analytics helping you make informed decisions, solve real business problems, and drive measurable impact. Training can be delivered online, on-site, or in a blended format with hands-on learning based on real business scenarios.",
+    "At SevenIsles Consultancy, we provide practical and industry-focused training programs in analytics and data skills for professionals and students. Our courses are designed to build capability from basic data understanding to advanced analytics helping you make informed decisions, solve real business problems, and drive measurable impact. Training can be delivered online, on-site, or in a blended format with hands-on learning based on real business scenarios.",
 
   modules: [
     {

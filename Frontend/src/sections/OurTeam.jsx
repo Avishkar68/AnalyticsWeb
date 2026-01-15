@@ -120,10 +120,10 @@ const OurTeam = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-20">
+        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-1">
 
           {/* LEFT: Image + Name + Role + Socials */}
-          <div className="w-full md:w-5/12 flex flex-col items-center text-center">
+          <div className="w-full md:w-4/12 flex flex-col items-center text-center">
 
             {/* Smaller Image */}
             <div className="w-64 md:w-72 aspect-[4/5] overflow-hidden rounded-3xl shadow-xl">
@@ -139,7 +139,7 @@ const OurTeam = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-maintext">
                 {member.name}
               </h3>
-              <p className="text-lg text-point-text font-medium mt-1">
+              <p className="text-xl text-point-text font-medium mt-1">
                 {member.role}
               </p>
             </div>
