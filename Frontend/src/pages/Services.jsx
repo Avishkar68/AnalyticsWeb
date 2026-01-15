@@ -1215,7 +1215,7 @@ const Services = () => {
   const mainService = services.find((s) => s.id === id);
   const industry = mainService?.industries?.find((i) => i.id === industryId);
   const offering = industry 
-  ? industry.offerings?.find((o) => o.id === offerId)
+  ? industry.offerings?.find((o) => o.id === offerId) 
   : mainService?.offerings?.find((o) => o.id === offerId);
 
   /* -------------------------------------------------------------------------- */
@@ -1252,7 +1252,53 @@ const Services = () => {
       </section>
     );
   }
+/* -------------------------------------------------------------------------- */
+  /* NEW: PRODUCTS CATEGORY VIEW (MATCHES INDUSTRY LISTING DESIGN)              */
+  /* -------------------------------------------------------------------------- */
+  if (mainService?.id === "products" && !offerId) {
+    return (
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{mainService.title}</h2>
+          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg leading-relaxed">
+            {mainService.detailedDescription}
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {mainService.offerings?.map((product) => (
+            <div
+              key={product.id}
+              onClick={() => navigate(`/services/${mainService.id}?offer=${product.id}`)}
+              className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
+            >
+              {/* Image Container */}
+              <div className="w-full h-64 overflow-hidden">
+                <img
+                  src={product.imageUrl || "https://images.unsplash.com/photo-1551288049-bbda38a5f9a2?q=80&w=800"}
+                  alt={product.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+              </div>
 
+              {/* Content Container - Matching Section 4 Design */}
+              <div className="p-8 md:p-10 flex-grow">
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h3 className="text-3xl font-bold text-maintext">{product.title}</h3>
+                  <div className="mt-2 shrink-0">
+                    <ArrowUpRight size={24} className="text-slate-300 group-hover:text-slate-900 transition-colors" />
+                  </div>
+                </div>
+                <p className="text-subtext text-md leading-relaxed">
+                  {product.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
   /* -------------------------------------------------------------------------- */
   /* PHARMACEUTICAL – DIRECT CONTENT                                           */
   /* -------------------------------------------------------------------------- */
@@ -1298,35 +1344,39 @@ const Services = () => {
   /* -------------------------------------------------------------------------- */
   /* 2. OFFERING DETAIL VIEW                                                     */
   /* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* 2. OFFERING DETAIL VIEW (BAES / RISK ANALYTICS ETC)                        */
-/* -------------------------------------------------------------------------- */
-if (mainService && offering) {
-  return (
-    <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
-      <div className="max-w-7xl mx-auto text-center mb-0">
-        <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{offering.title}</h1>
-        <p className="text-subtext text-base md:text-lg max-w-[1020px] mx-auto leading-relaxed font-medium">
-          {offering.description}
-        </p>
-      </div>
-      <div className="flex gap-8 md:gap-12 max-w-7xl mx-auto">
-        <div className="rounded-[2.5rem] p-8 md:p-14">
-          <h3 className="text-xl font-bold uppercase tracking-widest mb-4 flex items-center gap-3">Services We Offer</h3>
-          <div className="space-y-2">
-            {offering.points?.map((point, idx) => (
-              <div key={idx} className="flex gap-4 items-center">
-                <div className="mt-1 rounded-lg text-point-text"><GoDotFill /></div>
-                <span className="text-maintext font-medium text-base md:text-lg">{point}</span>
-              </div>
-            ))}
+  /* -------------------------------------------------------------------------- */
+  /* 2. OFFERING DETAIL VIEW (UPDATED TO WORK WITH PRODUCTS)                    */
+  /* -------------------------------------------------------------------------- */
+  if (mainService && offering) {
+    // Determine if we are looking at a product or an industry offering
+    const productData = mainService.id === "products" ? mainService.offerings.find(o => o.id === offerId) : null;
+    
+    return (
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-0">
+          <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{offering.title}</h1>
+          <p className="text-subtext text-base md:text-lg max-w-[1020px] mx-auto leading-relaxed font-medium">
+            {offering.description}
+          </p>
+        </div>
+        
+        <div className="flex gap-8 md:gap-12 max-w-7xl mx-auto">
+          <div className="rounded-[2.5rem] p-4 md:p-6">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-3 flex items-center gap-3">Services We Offer</h3>
+            <div className="space-y-2">
+              {(offering.points || offering.features)?.map((point, idx) => (
+                <div key={idx} className="flex gap-4 items-center">
+                  <div className="mt-1 rounded-lg text-point-text"><GoDotFill /></div>
+                  <span className="text-maintext font-medium text-base md:text-lg">{point}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-      
-      {/* Show Benefits specifically for products */}
-      {offering.benefits && (
-         <div className="max-w-4xl mx-auto bg-[#F8F9FB] border border-slate-200 rounded-[2.5rem] p-8 md:p-6 mb-8">
+
+        {/* NEW: Render benefits specifically if they exist (for BAES) */}
+        {offering.benefits && (
+          <div className="max-w-4xl mx-auto bg-[#F8F9FB] border border-slate-200 rounded-[2.5rem] p-8 md:p-6 mb-8 mt-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {offering.benefits.map((benefit, idx) => (
                 <div key={idx} className="flex gap-3">
@@ -1336,70 +1386,61 @@ if (mainService && offering) {
               ))}
             </div>
           </div>
-      )}
+        )}
 
-      {offering.additionalDesc && (
-        <div className="md:max-w-7xl mx-auto md:px-14 py-2">
-          <p className="text-maintext text-base md:text-xl text-left leading-relaxed font-medium rounded-xl">
-            {offering.additionalDesc}
-          </p>
-        </div>
-      )}
-    </section>
-  );
-}
+        {offering.additionalDesc && (
+          <div className="md:max-w-7xl mx-auto md:px-6 ">
+            <p className="text-maintext text-base md:text-lg text-left leading-relaxed rounded-xl">
+              {offering.additionalDesc}
+            </p>
+          </div>
+        )}
+      </section>
+    );
+  }
 
   /* -------------------------------------------------------------------------- */
   /* 3. INDUSTRY VIEW (E.G. BANKING SUB-PAGES)                                   */
   /* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* 3. CATEGORY VIEW (BANKING SUB-PAGES & PRODUCT LIST)                        */
-/* -------------------------------------------------------------------------- */
-if (mainService && (industry || mainService.id === "products")) {
-  // Use either the industry offerings or the top-level product offerings
-  const displayOfferings = industry ? industry.offerings : mainService.offerings;
-  const displayTitle = industry ? industry.title : mainService.title;
-  const displayDesc = industry ? industry.description : mainService.detailedDescription;
-
-  return (
-    <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
-      <div className="max-w-7xl mx-auto text-center mb-8">
-        <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{displayTitle}</h2>
-        <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">{displayDesc}</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-        {displayOfferings?.map((offer) => (
-          <div
-            key={offer.id}
-            onClick={() => {
-              // Redirect logic: includes industry if it exists, otherwise just the product offering
-              const url = industry 
-                ? `/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`
-                : `/services/${mainService.id}?offer=${offer.id}`;
-              navigate(url);
-            }}
-            className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
-          >
-            <div className="w-full h-80 overflow-hidden">
-              <img
-                src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"}
-                alt={offer.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-            </div>
-            <div className="p-8 md:p-10 md:h-80 flex flex-col justify-between">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">{offer.title}</h3>
-              <p className="text-subtext text-md leading-relaxed mb-6">{offer.description}</p>
-              <div className="flex items-center gap-2 text-[15px] font-bold uppercase tracking-widest px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
-                View Offering <ArrowUpRight size={14} />
+  if (mainService && industry) {
+    return (
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-8">
+          <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{industry.title}</h2>
+          <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">{industry.description}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          {industry.offerings.map((offer) => (
+            <div
+              key={offer.id}
+              onClick={() => navigate(`/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`)}
+              className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
+            >
+              <div className="w-full  h-80 overflow-hidden">
+                <img
+                  src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"}
+                  alt={offer.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
               </div>
+              <div className="p-8 md:p-10 md:h-80 flex flex-col justify-between">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">{offer.title}</h3>
+                <p className="text-subtext text-md leading-relaxed mb-6">{offer.description}</p>
+                <div className="flex items-center gap-2 text-[15px] font-bold uppercase tracking-widest  px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
+                  View Offering <ArrowUpRight size={14} />
+                </div>
+              </div>
+              
+
+
+
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   /* -------------------------------------------------------------------------- */
   /* PRODUCTS – DIRECT CONTENT VIEW                                              */
   /* -------------------------------------------------------------------------- */
