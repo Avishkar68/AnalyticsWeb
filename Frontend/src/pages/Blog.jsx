@@ -16,9 +16,7 @@ const Blog = () => {
 
         {/* Page Header */}
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-point-text uppercase mb-2">
-            Blog
-          </p>
+       
 
           <h1 className="text-4xl md:text-5xl font-bold text-maintext mb-4">
             Data Analytics & Business Strategy Insights
