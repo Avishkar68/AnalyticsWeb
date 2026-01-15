@@ -1221,8 +1221,8 @@ const Services = () => {
   /* -------------------------------------------------------------------------- */
   if (mainService?.id === "training") {
     return (
-      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center mb-14">
+      <section className="min-h-screen bg-white pt-12 md:pt-4 pb-20 px-6 flex flex-col justify-center  ">
+        <div className="max-w-7xl mx-auto text-center mb-10">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 text-maintext">
             {mainService.title}
           </h1>
@@ -1231,9 +1231,9 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-36 gap-y-8 ">
           {mainService.modules.map((module, idx) => (
-            <div key={idx}>
+            <div key={idx} className="">
               <h3 className="text-xl font-bold text-point-text mb-3">
                 {module.title}
               </h3>
@@ -1256,7 +1256,7 @@ const Services = () => {
   /* -------------------------------------------------------------------------- */
   if (mainService?.id === "consulting" && industry?.id === "pharmaceutical") {
     return (
-      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
         <div className="max-w-7xl text-center mx-auto">
           <div className="flex flex-col items-center">
             <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">Pharmaceutical</h1>
@@ -1294,8 +1294,8 @@ const Services = () => {
   /* -------------------------------------------------------------------------- */
   if (mainService && industry && offering) {
     return (
-      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center mb-12">
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-0">
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{offering.title}</h1>
           <p className="text-subtext text-base md:text-lg max-w-[1020px] mx-auto leading-relaxed font-medium">
             {offering.description}
@@ -1303,8 +1303,8 @@ const Services = () => {
         </div>
         <div className="flex gap-8 md:gap-12 max-w-7xl mx-auto">
           <div className="rounded-[2.5rem] p-8 md:p-14">
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-8 flex items-center gap-3">Services We Offer</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-4 flex items-center gap-3">Services We Offer</h3>
+            <div className="space-y-2">
               {(offering.points || offering.features)?.map((point, idx) => (
                 <div key={idx} className="flex gap-4 items-center">
                   <div className="mt-1 rounded-lg text-point-text"><GoDotFill /></div>
@@ -1315,7 +1315,7 @@ const Services = () => {
           </div>
         </div>
         {offering.additionalDesc && (
-          <div className="md:max-w-7xl mx-auto md:px-14 py-5">
+          <div className="md:max-w-7xl mx-auto md:px-14 py-2">
             <p className="text-maintext text-base md:text-xl text-left leading-relaxed font-medium rounded-xl">{offering.additionalDesc}</p>
           </div>
         )}
@@ -1328,8 +1328,8 @@ const Services = () => {
   /* -------------------------------------------------------------------------- */
   if (mainService && industry) {
     return (
-      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center mb-14">
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-8">
           <h2 className="text-3xl md:text-5xl font-bold text-maintext mb-6">{industry.title}</h2>
           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">{industry.description}</p>
         </div>
@@ -1340,14 +1340,14 @@ const Services = () => {
               onClick={() => navigate(`/services/${mainService.id}?industry=${industry.id}&offer=${offer.id}`)}
               className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
-              <div className="w-full h-60 overflow-hidden">
+              <div className="w-full h-80 overflow-hidden">
                 <img
                   src={offer.imageUrl || "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800"}
                   alt={offer.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-              <div className="p-8 md:p-10">
+              <div className="p-8 md:p-10 h-80 flex flex-col justify-between">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">{offer.title}</h3>
                 <p className="text-subtext text-md leading-relaxed mb-6">{offer.description}</p>
                 <div className="flex items-center gap-2 text-[15px] font-bold uppercase tracking-widest  px-5 py-3 border rounded-full w-fit bg-[#F8F9FB]">
@@ -1409,8 +1409,8 @@ const Services = () => {
   if (mainService) {
     const items = mainService.industries || mainService.subServices || [];
     return (
-      <section className="min-h-screen bg-white pt-12 md:pt-16 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center mb-14">
+      <section className="min-h-screen bg-white pt-12 md:pt-8 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">{mainService.title}</h2>
           <p className="text-subtext max-w-[820px] mx-auto text-base md:text-lg">{mainService.detailedDescription}</p>
         </div>
@@ -1421,7 +1421,7 @@ const Services = () => {
               onClick={() => mainService.industries ? navigate(`/services/${mainService.id}?industry=${item.id}`) : navigate(`/services/${mainService.id}?sub=${item.id}`)}
               className="group bg-white border border-slate-100 rounded-[2.5rem] overflow-hidden cursor-pointer hover:shadow-2xl transition-all flex flex-col"
             >
-              <div className="w-full h-52 overflow-hidden">
+              <div className="w-full h-fit overflow-hidden">
                 <img
                   src={item.imageUrl || "https://images.unsplash.com/photo-1551288049-bbda38a5f9a2?q=80&w=800"}
                   alt={item.title}
@@ -1429,12 +1429,15 @@ const Services = () => {
                 />
               </div>
               <div className="p-8 md:p-10">
-                <div className="mb-6 flex justify-between">
-                  <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center"><BarChart3 size={24} /></div>
-                  <ArrowUpRight size={20} className="text-slate-300" />
+                {/* Flex container to hold Title and Arrow side-by-side */}
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h3 className="text-3xl font-bold">{item.title}</h3>
+                  <div className="mt-2 shrink-0">
+                    <ArrowUpRight size={24} className="text-slate-300 group-hover:text-slate-900 transition-colors" />
+                  </div>
                 </div>
-                <h3 className="text-3xl font-bold mb-4">{item.title}</h3>
-                <p className="text-subtext text-md line-clamp-3">{item.description}</p>
+                
+                <p className="text-subtext text-md">{item.description}</p>
               </div>
             </div>
           ))}

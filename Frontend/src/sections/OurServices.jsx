@@ -84,9 +84,9 @@ const OurServices = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-maintext tracking-tighter mb-6">
             Our Core Services
           </h2>
-          <p className="text-subtext text-base md:text-lg max-w-[800px] mx-auto leading-relaxed font-medium">
+          {/* <p className="text-subtext text-base md:text-lg max-w-[800px] mx-auto leading-relaxed font-medium">
             We build the analytical systems required for the next generation of business.
-          </p>
+          </p> */}
         </div>
 
         {/* Cards */}

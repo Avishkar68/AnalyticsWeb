@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2, Facebook, Twitter, Instagram } from 'lucide-react';
-import sevenisles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png";
+import SevenIsles_consultancy_logo from "../assets/SevenIsles_consultancy_logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const handleOfferingsClick = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="space-y-4">
           <Link to="/" className="flex items-center z-[120]">
         <img
-          src={sevenisles_consultancy_logo}
+          src={SevenIsles_consultancy_logo}
           alt="SevenIsles Consultancy"
           className="w-48"
         />
@@ -85,7 +85,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-100 flex flex-col md:row items-center justify-between gap-6">
           <p className="text-slate-400 text-sm">
-            © {currentYear} Seveniles Analytics. All rights reserved.
+            © {currentYear} SevenIsles Consultancy. All rights reserved.
           </p>
           
           {/* <div className="flex items-center gap-4">

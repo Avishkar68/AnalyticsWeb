@@ -35,7 +35,7 @@ const Contact = () => {
         
 
           <h1 className="text-3xl md:text-5xl font-bold text-maintext mb-4 leading-tight">
-            Contact Sevenisles for Data Analytics & Consulting
+            Contact SevenIsles for Data Analytics & Consulting
           </h1>
 
           <p className="text-subtext text-base md:text-lg max-w-2xl mx-auto">
@@ -65,10 +65,10 @@ const Contact = () => {
                   </span>
                   <div className="flex flex-col gap-1 font-medium">
                     <a
-                      href="mailto:info@sevenislesconsultancy.com"
+                      href="mailto:info@SevenIslesconsultancy.com"
                       className="hover:text-point-text transition-colors"
                     >
-                      info@sevenislesconsultancy.com
+                      info@SevenIslesconsultancy.com
                     </a>
                   </div>
                 </div>

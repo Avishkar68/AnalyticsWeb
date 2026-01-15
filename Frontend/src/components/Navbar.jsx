@@ -1,7 +1,7 @@
 // import React, { useState, useEffect } from 'react';
 // import { Link, useLocation } from 'react-router-dom';
 // import { BarChart2, Menu, X } from 'lucide-react';
-// import sevenisles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png"
+// import SevenIsles_consultancy_logo from "../assets/SevenIsles_consultancy_logo.png"
 // const Navbar = () => {
 //   const [isOpen, setIsOpen] = useState(false);
 //   const location = useLocation();
@@ -31,7 +31,7 @@
 //       {/* Logo Section - EXACTLY AS ORIGINAL */}
 //       <Link to="/" className="flex items-center gap-1 hover:opacity-90 transition-opacity z-[120]">
 //         <div className="w-50 ">
-//           <img src={sevenisles_consultancy_logo} />
+//           <img src={SevenIsles_consultancy_logo} />
 //         </div>
 //         {/* <span className="text-2xl font-bold text-slate-800 tracking-tight">
 //           Seveniles
@@ -104,7 +104,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import sevenisles_consultancy_logo from "../assets/sevenisles_consultancy_logo.png";
+import SevenIsles_consultancy_logo from "../assets/SevenIsles_consultancy_logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -141,7 +141,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link to="/" className="flex items-center z-[120]">
         <img
-          src={sevenisles_consultancy_logo}
+          src={SevenIsles_consultancy_logo}
           alt="SevenIsles Consultancy"
           className="w-48"
         />

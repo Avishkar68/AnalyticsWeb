@@ -4,18 +4,16 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <section className="bg-[#F9FAFB] py-12 md:py-20 px-6">
       <div className="max-w-6xl mx-auto">
-
+        
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-       
-
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-maintext mb-4 leading-tight">
-              Data Analytics & Strategic Consulting Company 
+            Data Analytics & Strategic Consulting Firm
           </h1>
-
           <p className="text-subtext text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             We help businesses make confident decisions through strategy,
             data, and clarity.
@@ -23,15 +21,15 @@ const About = () => {
         </div>
 
         {/* Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
+          
           {/* Left Text / Image */}
           <div className="order-1">
             <div className="relative mb-6 md:mb-8">
               <img
                 src="https://plus.unsplash.com/premium_photo-1661431396990-7bc93ef3edec?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Team strategy meeting"
-                className="w-full h-[250px] md:h-[300px] object-cover rounded-3xl shadow-sm"
+                className="w-full h-[250px] md:h-[350px] object-cover rounded-3xl shadow-sm"
               />
             </div>
 
@@ -41,59 +39,38 @@ const About = () => {
 
             <div className="space-y-4">
               <p className="text-maintext text-base md:text-lg leading-relaxed">
-               Sevenisles Consultancy is a forward-thinking business analytics and strategic consulting firm dedicated to helping organizations turn data into actionable insight and lasting competitive advantage. In an era where data is abundant but clarity is scarce, we partner with businesses to unlock the true potential of information, enabling smarter decisions, optimized performance, and measurable growth. Our solutions 
-combine analytical rigor with real-world business context, so you no longer just have data, you have direction.
-
+                SevenIsles Consultancy is a forward-thinking business analytics and strategic consulting firm dedicated to helping organizations turn data into actionable insight and lasting competitive advantage. In an era where data is abundant but clarity is scarce, we partner with businesses to unlock the true potential of information, enabling smarter decisions, optimized performance, and measurable growth. Our solutions combine analytical rigor with real-world business context, so you no longer just have data, you have direction.
               </p>
 
               <p className="text-maintext text-base md:text-lg leading-relaxed">
-                At Sevenisles, we specialize in designing and delivering tailored analytics strategies, advanced data modeling, and transformational consulting services that drive real business outcomes.
+                At SevenIsles, we specialize in designing and delivering tailored analytics strategies, advanced data modeling, and transformational consulting services that drive real business outcomes.
               </p>
             </div>
           </div>
 
-          {/* Right Cards */}
-          <div className="grid grid-cols-1 gap-4 md:gap-6 order-2">
-            <div className="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
-              <h3 className="text-lg font-bold text-maintext mb-3">
-                Our Mission
-              </h3>
-              <p className="text-sm md:text-base text-subtext leading-relaxed">
-               To empower organizations of all sizes with precision analytics, strategic clarity, and practical insights helping them drive growth, optimize operations, and innovate with confidence.
-              </p>
-            </div>
+          {/* Right Cards - Mission & Vision Clubbed */}
+          <div className="order-2 pt-0 md:pt-0">
+            <div className="bg-white rounded-2xl md:rounded-3xl p-8 md:p-10 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-maintext mb-3 flex items-center gap-2">
+                  Our Mission
+                </h3>
+                <p className="text-base md:text-lg text-subtext leading-relaxed">
+                  To empower organizations of all sizes with precision analytics, strategic clarity, and practical insights helping them drive growth, optimize operations, and innovate with confidence.
+                </p>
+              </div>
 
-            <div className="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
-              <h3 className="text-lg font-bold text-maintext mb-3">
-                Our Vision
-              </h3>
-              <p className="text-sm md:text-base text-subtext leading-relaxed">
-                To become a trusted partner for organizations seeking
-                meaningful and measurable growth.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl md:rounded-[2rem] p-6 md:p-8 border border-slate-100 shadow-sm transition-hover hover:shadow-md">
-              <h3 className="text-lg font-bold text-maintext mb-3">
-                Our Values
-              </h3>
-              <ul className="text-sm md:text-base text-subtext space-y-2">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-point-text" /> 
-                  Transparency & trust
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-point-text" /> 
-                  Data-driven thinking
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-point-text" /> 
-                  Long-term impact
-                </li>
-              </ul>
+              <div className="pt-8 border-t border-slate-100">
+                <h3 className="text-xl font-bold text-maintext mb-3 flex items-center gap-2">
+                  Our Vision
+                </h3>
+                <p className="text-base md:text-lg text-subtext leading-relaxed">
+                  To become a trusted partner for organizations seeking
+                  meaningful and measurable growth.
+                </p>
+              </div>
             </div>
           </div>
-
         </div>
 
         {/* Stats Section */}
