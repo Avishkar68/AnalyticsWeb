@@ -170,12 +170,12 @@ const Navbar = () => {
           About Us
         </Link>
 
-        <Link
+        {/* <Link
           to="/blog"
           className="text-sm font-medium text-subtext hover:text-point-text"
         >
           Blog
-        </Link>
+        </Link> */}
       </div>
 
       {/* CTA */}
@@ -227,13 +227,13 @@ const Navbar = () => {
             About Us
           </Link>
 
-          <Link
+          {/* <Link
             to="/blog"
             onClick={() => setIsOpen(false)}
             className="text-3xl font-bold text-maintext"
           >
             Blog
-          </Link>
+          </Link> */}
 
           <Link to="/contact" onClick={() => setIsOpen(false)}>
             <button className="bg-maintext text-white px-10 py-4 rounded-full text-lg font-semibold">

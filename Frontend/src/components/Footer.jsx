@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart2, Facebook, Twitter, Instagram } from 'lucide-react';
+import { BarChart2, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import SevenIsles_consultancy_logo from "../assets/SILogo.png"
 
 const Footer = () => {
@@ -55,30 +55,39 @@ const Footer = () => {
           {/* Services */}
 
           {/* Information */}
-          <div>
-            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
-              Information
-            </h4>
-            <ul className="space-y-4">
-              {/* <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Privacy Policy</Link></li>
-              <li><Link to="#" className="text-subtext hover:text-point-text text-sm transition-colors">Terms & Conditions</Link></li> */}
-              <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact</Link></li>
-            </ul>
-          </div>
+         <div>
+  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+    Information
+  </h4>
+
+  <ul className="space-y-4 text-sm text-subtext">
+    <li className="leading-relaxed">
+      <span className="block text-slate-500 font-medium">Address</span>
+      1 2nd Street, Jersey City,<br />
+      NJ 07302, USA
+    </li>
+
+    <li>
+      <span className="block text-slate-500 font-medium">Phone</span>
+      <a
+        href="tel:+13478794529"
+        className="hover:text-point-text transition-colors"
+      >
+        +1 (347) 879-4529
+      </a>
+    </li>
+  </ul>
+</div>
+
           <div>
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
               Social Links
             </h4>
             <div className="flex items-center gap-4">
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-[#e4405f] hover:opacity-80 transition-opacity">
-              <Instagram size={18} />
+            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-blue-800 hover:opacity-80 transition-opacity">
+              <Linkedin size={18} />
             </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#e8f5fd] text-[#1da1f2] hover:opacity-80 transition-opacity">
-              <Twitter size={18} fill="currentColor" />
-            </a>
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#e7f0f7] text-[#3b5998] hover:opacity-80 transition-opacity">
-              <Facebook size={18} fill="currentColor" />
-            </a>
+            
           </div>
           </div>
         </div>
