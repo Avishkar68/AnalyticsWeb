@@ -38,6 +38,7 @@ import OurClients from "../sections/OurClients";
 import OurTeam from "../sections/OurTeam";
 import Careers from "../sections/Careers";
 import CTA from "../sections/CTA";
+import WhoWeAre from "../sections/WhoWeAre";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -50,13 +51,17 @@ const LandingPage = () => {
         <Hero />
       </div>{" "}
       <OurClients />
+      <WhoWeAre />
+
+      {/* 🔥 OFFERINGS TARGET */}
       <div id="offerings">
         <OurServices />
       </div>
-      <OurTeam />
-      <Testimonials />
-      <Blogs />
-      <Careers />
+
+      {/* <OurTeam /> */}
+      {/* <Testimonials /> */}
+      {/* <Blogs /> */}
+      {/* <Careers /> */}
       <CTA />
     </div>
   );
