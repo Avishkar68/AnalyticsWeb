@@ -84,7 +84,7 @@ const Footer = () => {
               Social Links
             </h4>
             <div className="flex items-center gap-4">
-            <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-blue-800 hover:opacity-80 transition-opacity">
+            <a href="https://www.linkedin.com/company/sevenisles-consultancy" target='_blank' className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-blue-800 hover:opacity-80 transition-opacity">
               <Linkedin size={18} />
             </a>
             

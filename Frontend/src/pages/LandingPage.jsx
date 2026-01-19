@@ -17,7 +17,7 @@
 //       <Hero/>
 //       <OurClients/>
 //       <OurServices/>
-      
+
 //       <OurTeam/>
 //       <Testimonials/>
 //       <Blogs/>
@@ -46,14 +46,13 @@ const LandingPage = () => {
 
   return (
     <div className="font-inter">
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>{" "}
       <OurClients />
-
-      {/* 🔥 OFFERINGS TARGET */}
       <div id="offerings">
         <OurServices />
       </div>
-
       <OurTeam />
       <Testimonials />
       <Blogs />

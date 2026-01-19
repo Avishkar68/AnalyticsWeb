@@ -134,6 +134,22 @@ const Navbar = () => {
     }
     setIsOpen(false);
   };
+  const handleHeroClick = () => {
+  if (location.pathname !== "/") {
+    navigate("/");
+    setTimeout(() => {
+      document
+        .getElementById("hero")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 150);
+  } else {
+    document
+      .getElementById("hero")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }
+  setIsOpen(false);
+};
+
 
   return (
     <nav className="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100 sticky top-0 z-[100]">
@@ -149,12 +165,13 @@ const Navbar = () => {
 
       {/* Desktop Links */}
       <div className="hidden md:flex items-center gap-8">
-        <Link
-          to="/"
-          className="text-sm font-medium text-subtext hover:text-point-text"
-        >
-          Home
-        </Link>
+       <button
+  onClick={handleHeroClick}
+  className="text-sm font-medium text-subtext hover:text-point-text"
+>
+  Home
+</button>
+
 
         <button
           onClick={handleOfferingsClick}
@@ -204,13 +221,13 @@ const Navbar = () => {
         <div className="absolute inset-0 bg-white/80 backdrop-blur-2xl" />
 
         <div className="relative h-[100dvh] flex flex-col items-center justify-center gap-8">
-          <Link
-            to="/"
-            onClick={() => setIsOpen(false)}
-            className="text-3xl font-bold text-maintext"
-          >
-            Home
-          </Link>
+          <button
+  onClick={handleHeroClick}
+  className="text-3xl font-bold text-maintext"
+>
+  Home
+</button>
+
 
           <button
             onClick={handleOfferingsClick}
