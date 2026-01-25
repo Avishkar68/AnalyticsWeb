@@ -137,7 +137,7 @@ const OurTeam = () => {
                 rel="noopener noreferrer"
                 className="underline  transition-all text-xl text-point-text font-medium "
               >
-                <div className="p-3 bg-gray-100 w-fit rounded-full text-maintext hover:bg-point-text hover:text-white transition-colors">
+                <div className="p-3 mb-4 bg-gray-100 w-fit rounded-full text-maintext hover:bg-point-text hover:text-white transition-colors">
                   <Linkedin size={22} />
                 </div>
               </a>

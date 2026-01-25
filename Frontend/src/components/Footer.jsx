@@ -100,10 +100,9 @@ const Footer = () => {
               Social Links
             </h4>
             <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com/company/sevenisles-consultancy" target='_blank' className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-blue-800 hover:opacity-80 transition-opacity">
+              <a href="https://www.linkedin.com/company/sevenisles-consultancy" target='_blank' className="p-3 mb-4 bg-gray-100 w-fit rounded-full text-maintext hover:bg-point-text hover:text-white transition-colors">
                 <Linkedin size={18} />
               </a>
-
             </div>
           </div>
         </div>
