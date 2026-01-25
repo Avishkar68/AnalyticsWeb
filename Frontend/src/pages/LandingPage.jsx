@@ -50,8 +50,11 @@ const LandingPage = () => {
       <div id="hero">
         <Hero />
       </div>{" "}
-      <OurClients />
-      <WhoWeAre />
+      {/* <OurClients /> */}
+      <div id="who-we-are" className="">
+        <WhoWeAre />
+      </div>
+
 
       {/* 🔥 OFFERINGS TARGET */}
       <div id="offerings">

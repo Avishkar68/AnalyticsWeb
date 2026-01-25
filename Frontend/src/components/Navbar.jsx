@@ -135,20 +135,21 @@ const Navbar = () => {
     setIsOpen(false);
   };
   const handleHeroClick = () => {
-  if (location.pathname !== "/") {
-    navigate("/");
-    setTimeout(() => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document
+          .getElementById("who-we-are")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    } else {
       document
-        .getElementById("hero")
+        .getElementById("who-we-are")
         ?.scrollIntoView({ behavior: "smooth" });
-    }, 150);
-  } else {
-    document
-      .getElementById("hero")
-      ?.scrollIntoView({ behavior: "smooth" });
-  }
-  setIsOpen(false);
-};
+    }
+    setIsOpen(false);
+  };
+  
 
 
   return (

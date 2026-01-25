@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSendEmail = (e) => {
     e.preventDefault();
 
-    const recipient = "kakadeavishkar84@gmail.com";
+    const recipient = "info@sevenislesconsultancy.com";
     const subject = encodeURIComponent(`New Inquiry from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n\nMessage:\n${formData.message}`
@@ -65,10 +65,10 @@ const Contact = () => {
                   </span>
                   <div className="flex flex-col gap-1 font-medium">
                     <a
-                      href="mailto:info@SevenIslesconsultancy.com"
+                      href="mailto:info@sevenislesconsultancy.com"
                       className="hover:text-point-text transition-colors"
                     >
-                      info@SevenIslesconsultancy.com
+                     info@sevenislesconsultancy.com
                     </a>
                   </div>
                 </div>

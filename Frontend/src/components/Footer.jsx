@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart2, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import SevenIsles_consultancy_logo from "../assets/SILogo.png"
-
+import { useNavigate } from 'react-router-dom';
 const Footer = () => {
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
   const handleOfferingsClick = () => {
     if (location.pathname !== "/") {
@@ -18,23 +19,23 @@ const Footer = () => {
         .getElementById("offerings")
         ?.scrollIntoView({ behavior: "smooth" });
     }
-    setIsOpen(false);
   };
+
   return (
     <footer className="bg-white pt-16 pb-8 px-8 border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          
+
           {/* Brand Column */}
           <div className="space-y-4">
-          <Link to="/" className="flex items-center z-[120]">
-        <img
-          src={SevenIsles_consultancy_logo}
-          alt="SevenIsles Consultancy"
-          className="w-48"
-        />
-      </Link>
+            <Link to="/" className="flex items-center z-[120]">
+              <img
+                src={SevenIsles_consultancy_logo}
+                alt="SevenIsles Consultancy"
+                className="w-48"
+              />
+            </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">
               Analytics and strategy for growing businesses.
             </p>
@@ -47,6 +48,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li><Link to="/about" className="text-subtext hover:text-point-text text-sm transition-colors">About Us</Link></li>
+              <li> <button
+                onClick={handleOfferingsClick}
+                className="text-sm font-medium text-subtext hover:text-point-text"
+              >
+                Offerings
+              </button></li>
               <li><Link to="/contact" className="text-subtext hover:text-point-text text-sm transition-colors">Contact Us</Link></li>
               {/* <li><Link to="/blog" className="text-subtext hover:text-point-text text-sm transition-colors">Blog</Link></li> */}
             </ul>
@@ -55,40 +62,49 @@ const Footer = () => {
           {/* Services */}
 
           {/* Information */}
-         <div>
-  <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
-    Information
-  </h4>
+          <div className='md:ml-[-50px]'>
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+              Information
+            </h4>
 
-  <ul className="space-y-4 text-sm text-subtext">
-    <li className="leading-relaxed">
-      <span className="block text-slate-500 font-medium">Address</span>
-      1 2nd Street, Jersey City,<br />
-      NJ 07302, USA
-    </li>
+            <ul className="space-y-4 text-sm text-subtext">
+              <li className="leading-relaxed">
+                <span className="block text-slate-500 font-medium">Address</span>
+                1 2nd Street, Jersey City,<br />
+                NJ 07302, USA
+              </li>
 
-    <li>
-      <span className="block text-slate-500 font-medium">Phone</span>
-      <a
-        href="tel:+13478794529"
-        className="hover:text-point-text transition-colors"
-      >
-        +1 (347) 879-4529
-      </a>
-    </li>
-  </ul>
-</div>
+              <li>
+                <span className="block text-slate-500 font-medium">Phone</span>
+                <a
+                  href="tel:+13478794529"
+                  className="hover:text-point-text transition-colors"
+                >
+                  +1 (347) 879-4529
+                </a>
+              </li>
+              <li>
+                <span className="block text-slate-500 font-medium">Email</span>
+                <a
+                  href="mailto:info@sevenislesconsultancy.com"
+                  className="hover:text-point-text transition-colors"
+                >
+                  info@sevenislesconsultancy.com
+                </a>
+              </li>
+            </ul>
+          </div>
 
           <div>
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
               Social Links
             </h4>
             <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/company/sevenisles-consultancy" target='_blank' className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-blue-800 hover:opacity-80 transition-opacity">
-              <Linkedin size={18} />
-            </a>
-            
-          </div>
+              <a href="https://www.linkedin.com/company/sevenisles-consultancy" target='_blank' className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-blue-800 hover:opacity-80 transition-opacity">
+                <Linkedin size={18} />
+              </a>
+
+            </div>
           </div>
         </div>
 
@@ -97,7 +113,7 @@ const Footer = () => {
           <p className="text-slate-400 text-sm">
             © {currentYear} SevenIsles Consultancy. All rights reserved.
           </p>
-          
+
           {/* <div className="flex items-center gap-4">
             <a href="#" className="w-8 h-8 flex items-center justify-center rounded bg-[#fdf2f0] text-[#e4405f] hover:opacity-80 transition-opacity">
               <Instagram size={18} />
